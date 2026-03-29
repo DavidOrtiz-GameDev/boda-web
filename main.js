@@ -27,7 +27,6 @@ switch (parseInt(total)) {
   default:
     file = '1';
 }
-document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");
 
 document.querySelector("button").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
