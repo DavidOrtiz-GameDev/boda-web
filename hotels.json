@@ -1,0 +1,273 @@
+[
+  {
+    "name": "Biohotel Metepec",
+    "type": "Hotel",
+    "zone": "Metepec",
+    "price": 1046,
+    "distance": 17,
+    "stars": 4,
+    "website": "https://www.biohotelmexico.com",
+    "websiteText": "www.biohotelmexico.com",
+    "mapLink": "https://goo.gl/maps/Pd21og6Lf9kbHT826",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d589.4440778391265!2d-99.60465252399445!3d19.25141658630653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8c78c661076970a4!2sBiohotel%20Metepec!5e0!3m2!1ses!2smx!4v1623219979193!5m2!1ses!2smx",
+    "benefits": [
+      "Ubicado en el centro de Metepec.",
+      "Hotel informal de fachada de ladrillo, con habitaciones amplias y sencillas (sin aire acondicionado).",
+      "Wi-Fi, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana y mesa de trabajo ."
+    ]
+  },{
+    "name": "Holiday Inn Express Toluca Galerías Metepec",
+    "type": "Hotel",
+    "zone": "Metepec",
+    "price": 1560,
+    "distance": 20,
+    "stars": 4,
+    "website": "https://www.ihg.com/holidayinnexpress/hotels/us/es/metepec/tlume/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-MX-_-TLUME",
+    "websiteText": "www.ihg.com",
+    "mapLink": "https://goo.gl/maps/BSPTGi3pDqLg3zMH8",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30133.68870471813!2d-99.60465252399445!3d19.251419118528727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8bc59b13e753%3A0xea96d629f64a1ecb!2sHoliday%20Inn%20Express%20Toluca%20Galerias%20Metepec!5e0!3m2!1ses!2smx!4v1623285869648!5m2!1ses!2smx",
+    "benefits": [
+      "Habitaciones modernas",
+      "Gimnasio.",
+      "Wi-Fi, Aire acondicionado, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana, Escritorio, Cafetera, Caja fuerte."
+    ]
+  },{
+    "name": "Best Western Plus Metepec & Suites",
+    "type": "Hotel",
+    "zone": "Blvd. Las Torres",
+    "price": 930,
+    "distance": 15,
+    "stars": 3,
+    "website": "https://www.bestwestern.com/es_ES/book/hotel-rooms.70285.html?iata=00174040&ssob=BLBWI0004G&cid=BLBWI0004G:google:gmb:70285",
+    "websiteText": "www.bestwestern.com",
+    "mapLink": "https://g.page/best-western-plus-metepec-suites?share",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37235.660693600774!2d-99.59083372635105!3d19.279567979007364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8afc02d4b305%3A0xc231c9a4988cd355!2sBest%20Western%20Plus%20Metepec%20%26%20Suites!5e0!3m2!1ses!2smx!4v1623287943143!5m2!1ses!2smx",
+    "benefits": [
+      "Habitaciones modernas",
+      "Gimnasio, Lavandería y muchos servicios más.",
+      "Wi-Fi, Aire acondicionado, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana, Escritorio, Cafetera, Secadora de pelo."
+    ]
+  },{
+    "name": "Crowne Plaza Toluca-Lancaster",
+    "type": "Hotel",
+    "zone": "Blvd. Paseo Tollocan",
+    "price": 1765,
+    "distance": 13,
+    "stars": 4,
+    "website": "https://www.ihg.com/crowneplaza/hotels/us/es/metepec/tlucp/hoteldetail?cm_mmc=GoogleMaps-_-CP-_-MX-_-TLUCP",
+    "websiteText": "www.ihg.com",
+    "mapLink": "https://goo.gl/maps/8iF2CTmQHNoUPw6p9",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35146.19037022679!2d-99.5865230945066!3d19.2776711999117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8a406183fecb%3A0xb38ee484fe53a2cf!2sCrowne%20Plaza%20Toluca-Lancaster!5e0!3m2!1ses!2smx!4v1623289949050!5m2!1ses!2smx",
+    "benefits": [
+      "Hotel moderno con habitaciones tranquilas.",
+      "Gimnasio, Lavandería, Bar, Restaurante, Spa, Baño de vapor y muchos servicios más.",
+      "Wi-Fi, Aire acondicionado, Estacionamiento gratuito, TV de pantalla plana, Escritorio."
+    ]
+  },{
+    "name": "La Quinta Hotel",
+    "type": "Hotel",
+    "zone": "Blvd. Paseo Tollocan",
+    "price": 1350,
+    "distance": 17,
+    "stars": 4,
+    "website": "http://www.quintadelrey.com.mx/index.php",
+    "websiteText": "www.quintadelrey.com.mx",
+    "mapLink": "https://g.page/QRHTOLUCA?share",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13420.60801384822!2d-99.57144051968224!3d19.281018162825674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89ee26041c17%3A0xc672eec38729e315!2sLa%20Quinta%20Hotel!5e0!3m2!1ses!2smx!4v1623290913364!5m2!1ses!2smx",
+    "benefits": [
+      "Hotel tranquilo de estilo colonial español, con habitaciones elegantes y decoradas con muebles de madera.",
+      "Gimnasio, Bar, Restaurante, Piscina cubierta, Spa con jacuzzi, Sauna, Baño turco, Capilla, Jardines amplios.",
+      "Wi-Fi, Aire acondicionado, Estacionamiento gratuito, TV de pantalla plana, Caja fuerte, Secadora de pelo."
+    ]
+  },{
+    "name": "Holiday Inn Express Hotel & Suites Toluca Zona Aeropuerto",
+    "type": "Hotel",
+    "zone": "Blvd. Miguel Alemán",
+    "price": 1160,
+    "distance": 11,
+    "stars": 4,
+    "website": "https://www.ihg.com/holidayinnexpress/hotels/us/es/toluca/tluzo/hoteldetail?cm_mmc=GoogleMaps-_-EX-_-MX-_-TLUZO",
+    "websiteText": "www.ihg.com",
+    "mapLink": "https://goo.gl/maps/TbadrRvSNPxnG2vc8",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.813251886304!2d-99.55694169594322!3d19.291646954100926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89a45f15e155%3A0xb2b1743610c5d613!2sHoliday%20Inn%20Express%20Hotel%20%26%20Suites%20Toluca%20Zona%20Aeropuerto!5e0!3m2!1ses!2smx!4v1623292350981!5m2!1ses!2smx",
+    "benefits": [
+      "Hotel moderno.",
+      "Gimnasio, Piscina exterior, Lavandería, y muchos servicios más.",
+      "Wi-Fi, Aire acondicionado, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana, Escritorio, Cafetera, Secadora de pelo."
+    ]
+  },{
+    "name": "City Express Toluca",
+    "type": "Hotel",
+    "zone": "Blvd. Miguel Alemán",
+    "price": 940,
+    "distance": 12,
+    "stars": 4,
+    "website": "https://www.cityexpress.com/express/hoteles-mexico/estado-de-mexico/toluca-de-lerdo/toluca",
+    "websiteText": "www.cityexpress.com",
+    "mapLink": "https://goo.gl/maps/FnHGuwyewuZGj9fP9",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14776.136669103917!2d-99.56903624983423!3d19.288989494306804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8aa4be593395%3A0x3d732f9991e2041b!2sCity%20Express%20Toluca!5e0!3m2!1ses!2smx!4v1623294216477!5m2!1ses!2smx",
+    "benefits": [
+      "Hotel de habitaciones sencillas.",
+      "Gimnasio, Lavandería, y muchos servicios más.",
+      "Wi-Fi, Aire acondicionado, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana, Caja fuerte."
+    ]
+  },{
+    "name": "Microtel Inn & Suites by Wyndham Toluca",
+    "type": "Hotel",
+    "zone": "Blvd. Miguel Alemán",
+    "price": 780,
+    "distance": 15,
+    "stars": 4,
+    "website": "https://www.wyndhamhotels.com/es-xl/microtel/toluca-mexico/microtel-inn-and-suites-toluca/overview?CID=LC:MT::GGL:RIO:National:32362&iata=00093796",
+    "websiteText": "www.wyndhamhotels.com",
+    "mapLink": "https://goo.gl/maps/8CaEH2H8zvoXY8V5A",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17571.93806340076!2d-99.57082593401276!3d19.288505670347877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8ac8ad155555%3A0xa884e757b8aeff37!2sMicrotel%20Inn%20%26%20Suites%20by%20Wyndham%20Toluca!5e0!3m2!1ses!2smx!4v1623294861337!5m2!1ses!2smx",
+    "benefits": [
+      "Hotel tranquilo con habitaciones modernas.",
+      "Gimnasio, Lavandería.",
+      "Wi-Fi, Aire acondicionado, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana, Escritorio."
+    ]
+  },{
+    "name": "City Express Junior Toluca Aeropuerto",
+    "type": "Hotel",
+    "zone": "Blvd. Miguel Alemán",
+    "price": 700,
+    "distance": 11,
+    "stars": 4,
+    "website": "https://www.cityexpress.com/junior/hoteles-mexico/estado-de-mexico/toluca-de-lerdo/toluca",
+    "websiteText": "www.cityexpress.com",
+    "mapLink": "https://goo.gl/maps/epZtWvd2uKJwhJ1bA",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12667.060870121213!2d-99.57107657856015!3d19.28498370176264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8ac8ad155555%3A0xde3f558d8055d31c!2sCity%20Express%20Junior%20Toluca%20Aeropuerto!5e0!3m2!1ses!2smx!4v1623296941512!5m2!1ses!2smx",
+    "benefits": [
+      "Hotel económico y sencillo.",
+      "Lavandería.",
+      "Wi-Fi, Aire acondicionado, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana, Caja fuerte, Plancha."
+    ]
+  },{
+    "name": "Fiesta Inn Toluca Tollocan",
+    "type": "Hotel",
+    "zone": "Blvd. Paseo Tollocan",
+    "price": 1020,
+    "distance": 21,
+    "stars": 4,
+    "website": "https://www.fiestainn.com/es/web/fiesta-inn-toluca-tollocan",
+    "websiteText": "www.fiestainn.com",
+    "mapLink": "https://goo.gl/maps/rMwf4KQmq3sybaaU6",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30129.069488579837!2d-99.60621154459773!3d19.27655173752848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd89afc3087c51%3A0x1f53b6d7ca73c105!2sFiesta%20Inn%20Toluca%20Tollocan!5e0!3m2!1ses!2smx!4v1623295546359!5m2!1ses!2smx",
+    "benefits": [
+      "A 10 min. del centro de Toluca.",
+      "Hotel modesto con habitaciones luminosas y una decoración tradicional.",
+      "Gimnasio, Lavandería, Piscina cubierta, Bar, Restaurante, y muchos servicios más.",
+      "Wi-Fi, Aire acondicionado, Desayuno incluido, Estacionamiento gratuito, TV de pantalla plana, Escritorio."
+    ]
+  },{
+    "name": "Radisson del Rey Toluca",
+    "type": "Hotel",
+    "zone": "Blvd. Paseo Tollocan",
+    "price": 1200,
+    "distance": 22,
+    "stars": 4,
+    "website": "https://www.radissonhotelsamericas.com/es-xl/hoteles/radisson-toluca-del-rey?cid=a:se+b:gmb+c:amer+i:local+e:rad+d:mex+h:MEXTOMX",
+    "websiteText": "www.radissonhotelsamericas.com",
+    "mapLink": "https://goo.gl/maps/HPzSaokeEYHToB4M8",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30127.124526007952!2d-99.62689340114595!3d19.28712462731501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cd8a23b4dfa083%3A0xaa29627705a64425!2sRadisson%20del%20Rey%20Toluca!5e0!3m2!1ses!2smx!4v1623296219507!5m2!1ses!2smx",
+    "benefits": [
+      "A 10 min. del centro de Toluca.",
+      "Hotel modesto con habitaciones discretas",
+      "Gimnasio, Lavandería, Piscina cubierta, Bar, Restaurante, Sauna, Jacuzzi, Sala de juegos, Jardines, y muchos servicios más.",
+      "Wi-Fi, Aire acondicionado, Estacionamiento gratuito, TV de pantalla plana, Escritorio, Caja fuerte, Cafetera, Secadora de pelo, Plancha."
+    ]
+  },{
+    "name": "Loft entero | 2 personas",
+    "type": "AirBnB",
+    "zone": "Metepec",
+    "price": 491,
+    "distance": 7,
+    "stars": 4,
+    "website": "https://es.airbnb.com/rooms/38552107?check_in=2021-07-17&check_out=2021-07-18&guests=1&adults=2&s=67&unique_share_id=06aed43b-1df3-4c15-98b4-eda3d128cd47",
+    "websiteText": "es.airbnb.com/rooms/38552107",
+    "mapLink": "https://goo.gl/maps/Buq5vCokPZv1Yjh19",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3857090539527!2d-99.55767147087816!3d19.26558579420003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE1JzU2LjEiTiA5OcKwMzMnMjIuNCJX!5e0!3m2!1ses!2smx!4v1623298067901!5m2!1ses!2smx",
+    "benefits": [
+      "Loft independiente, muy cómodo y con amplios espacios.",
+      "Wi-Fi, Estacionamiento gratuito, TV, Parrilla, Horno de microondas, Refrigerador, Plancha.",
+      "El anfitrión renta también otros Lofts independientes similares."
+    ]
+  },{
+    "name": "Cabaña Guerrero #26 LA TROJE | 2 personas",
+    "type": "AirBnB",
+    "zone": "Metepec",
+    "price": 1430,
+    "distance": 11,
+    "stars": 4,
+    "website": "https://es.airbnb.com/rooms/28253607?check_in=2021-07-17&check_out=2021-07-18&guests=1&adults=2&s=67&unique_share_id=22e89bf8-b2a3-467d-9573-abadf0cd00b8",
+    "websiteText": "es.airbnb.com/rooms/28253607",
+    "mapLink": "https://goo.gl/maps/8EMgCQt4dpx1QVy19",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15066.624377678878!2d-99.58861406205529!3d19.253814191777185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE1JzExLjkiTiA5OcKwMzYnMDUuMSJX!5e0!3m2!1ses!2smx!4v1623299516455!5m2!1ses!2smx",
+    "benefits": [
+      "Cabaña estilo rústico cerca del centro de Metepec",
+      "Wi-Fi, Estacionamiento gratuito, TV, Parrilla, Microondas, Refrigerador, Plancha, Secadora de pelo.",
+      "El anfitrión renta también otras Cabañas similares a distintos precios."
+    ]
+  },{
+    "name": "Departamento Metepec | 2 personas",
+    "type": "AirBnB",
+    "zone": "Metepec",
+    "price": 880,
+    "distance": 14,
+    "stars": 4,
+    "website": "https://es.airbnb.com/rooms/49595646?check_in=2021-07-17&check_out=2021-07-18&guests=1&adults=2&s=67&unique_share_id=6a0d0113-ad83-436f-827b-9172ee344902",
+    "websiteText": "es.airbnb.com/rooms/49595646",
+    "mapLink": "https://goo.gl/maps/6VoGVDCqyUf1e9226",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3398260694657!2d-99.60041568454433!3d19.2675826869783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE2JzAzLjMiTiA5OcKwMzUnNTMuNiJX!5e0!3m2!1ses!2smx!4v1623300623860!5m2!1ses!2smx",
+    "benefits": [
+      "Departamento independiente y acogedor",
+      "Wi-Fi, Estacionamiento gratuito, TV, Estufa, Refrigerador, Cafetera, Comedor."
+    ]
+  },{
+    "name": "Departamento Metepec | 2-6 personas",
+    "type": "AirBnB",
+    "zone": "Metepec",
+    "price": 1420,
+    "distance": 12,
+    "stars": 4,
+    "website": "https://es.airbnb.com/rooms/45771340?check_in=2021-07-17&check_out=2021-07-18&guests=4&adults=4&s=67&unique_share_id=1b2d32af-51c6-4821-9041-445b11c70b76",
+    "websiteText": "es.airbnb.com/rooms/45771340",
+    "mapLink": "https://goo.gl/maps/aLE1nkkjngd3BRMK9",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.0862868503878!2d-99.59342974870671!3d19.27861348690802!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE2JzQzLjAiTiA5OcKwMzUnMjguNSJX!5e0!3m2!1ses!2smx!4v1623301257419!5m2!1ses!2smx",
+    "benefits": [
+      "Alojamiento nuevo, muy bien ubicado finamente decorado, muy cómodo.",
+      "Wi-Fi, Estacionamiento gratuito, TV, Estufa, Microondas, Refrigerador, Cafetera, Comedor, Secador de pelo, Plancha, Caja fuerte."
+    ]
+  },{
+    "name": "Departamento Metepec | 2-4 personas",
+    "type": "AirBnB",
+    "zone": "Metepec",
+    "price": 1120,
+    "distance": 14,
+    "stars": 4,
+    "website": "https://es.airbnb.com/rooms/45145492?check_in=2021-07-17&check_out=2021-07-18&guests=1&adults=1&s=67&unique_share_id=7344d54a-a895-4de8-ab69-845e388b9687",
+    "websiteText": "es.airbnb.com/rooms/45145492",
+    "mapLink": "https://goo.gl/maps/WY99Kmu1Cah38XxB8",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.017653570726!2d-99.60393507546324!3d19.281598489607532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE2JzUzLjgiTiA5OcKwMzYnMDcuMSJX!5e0!3m2!1ses!2smx!4v1623301777007!5m2!1ses!2smx",
+    "benefits": [
+      "Departamento dentro de casa duplex.",
+      "Wi-Fi, Estacionamiento gratuito, TV, Estufa, Microondas, Refrigerador, Comedor."
+    ]
+  },{
+    "name": "Departamento Metepec | 2-4 personas",
+    "type": "AirBnB",
+    "zone": "Metepec",
+    "price": 1192,
+    "distance": 11,
+    "stars": 4,
+    "website": "https://es.airbnb.com/rooms/45240390?check_in=2021-07-17&check_out=2021-07-18&guests=1&adults=2&s=67&unique_share_id=f33b282e-ba6d-42b9-bf35-d0c3a792e313",
+    "websiteText": "es.airbnb.com/rooms/45240390",
+    "mapLink": "https://goo.gl/maps/2Ci6sHMNCsWJxHyT9",
+    "mapIframe": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.954145582431!2d-99.56538304918607!3d19.284360186904667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDE3JzAzLjciTiA5OcKwMzMnNDcuNSJX!5e0!3m2!1ses!2smx!4v1623302282745!5m2!1ses!2smx",
+    "benefits": [
+      "Lugar muy cómodo, acogedor y a la vanguardia.",
+      "Wi-Fi, Estacionamiento gratuito, TV, Estufa, Refrigerador, Comedor, Plancha, Secador de pelo."
+    ]
+  }
+]

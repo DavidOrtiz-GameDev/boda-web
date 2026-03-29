@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="hospedaje.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <title>Hospedaje | Boda Nelly & Héctor</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Opciones de Hospedaje</h1>
+    <form class="frmFilter">
+      <div class="frmInput">
+        <label for="typeFilter">Tipo:</label>
+        <select id="typeFilter" onchange="filterResults()">
+          <option value="Todos">Todos</option>
+          <option value="Hotel">Hotel</option>
+          <option value="AirBnB">AirBnB</option>
+        </select>
+      </div>
+      <div class="frmInput input-lg">
+        <label for="priceFilter">Costo: <span class="slider-value">$2,000</span></label>
+        <div class="slider-container">
+          <span>$400</span>
+          <input id="priceFilter" type="range" min="400" max="2000" step="100" value="2000" class="slider" onchange="filterResults();setSliderVal()">
+          <span>$2,000</span>
+        </div>
+      </div>
+      <div class="frmInput input-xl">
+        <label>Ordenar por:</label>
+        <label class="radio-container">Tipo
+          <input type="radio" name="orderBy" checked="checked" value="type" onchange="filterResults()">
+          <span class="checkmark"></span>
+        </label>
+        <label class="radio-container">Precio
+          <input type="radio" name="orderBy" value="price" onchange="filterResults()">
+          <span class="checkmark"></span>
+        </label>
+        <label class="radio-container">Distancia
+          <input type="radio" name="orderBy" value="distance" onchange="filterResults()">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </form>
+    <p><span id="total" class="total">0</span> resultados</p>
+    <div id="hotels" class="hotels"></div>
+  </div>
+  <script src="hospedaje.js"></script>
+</body>
+</html>

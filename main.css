@@ -1,0 +1,240 @@
+body {
+  min-width      : -webkit-fit-content;
+  min-width      : -moz-fit-content;
+  min-width      : fit-content;
+  min-height     : -webkit-fit-content;
+  min-height     : -moz-fit-content;
+  min-height     : fit-content;
+  margin         : 0;
+  background     : url("images/wood-background.jpg") repeat-y center center fixed;
+  background-size: 100% 100%;
+  font-family    : Helvetica, sans-serif;
+}
+.content {
+  padding   : 0 1.5em;
+  width     : 100%;
+  min-width : 850px;
+  box-sizing: border-box;
+}
+
+.folder {
+  position      : relative;
+  width         : 1200px;
+  height        : 1060px;
+  padding-top   : 3em;
+  padding-bottom: 1em;
+  display       : flex;
+  margin        : 0 auto;
+}
+
+.folder .left,
+.folder .right {
+  background: url("images/blue-background.jpg") no-repeat center;
+}
+.folder .left {
+  width      : 260px;
+  z-index    : 5;
+  border-left: 2px solid rgba(0,0,0,0.4);
+  transition : all 2.5s ease;
+}
+.folder .right {
+  width       : 350px;
+  z-index     : 3;
+  border-right: 2px solid rgba(0,0,0,0.4);
+  transition  : all 2s ease;
+}
+.folder .center {
+  width           : 500px;
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.4), transparent 2%), 
+    linear-gradient(to left, rgba(0,0,0,0.4), transparent 2%), 
+    url("images/blue-background.jpg");
+  background-repeat  : no-repeat;
+  background-position: center;
+}
+.folder .paper-one img {
+  width     : calc(100% - 2em);
+  margin    : 1em;
+  box-sizing: border-box;
+}
+.folder.closed .left {
+  transform       : rotateY(180deg);
+  transform-origin: center right;
+}
+.folder.closed .right {
+  transform       : rotateY(180deg);
+  transform-origin: center left;
+}
+.folder .guest {
+  position   : absolute;
+  top        : 2em;
+  left       : 300px;
+  width      : 450px;
+  min-height : 1.2em;
+  padding    : .2em;
+  z-index    : 7;
+  background : #fafafa;
+  box-shadow : 5px 5px 5px rgba(0,0,0,0.5);
+  font-size  : 2em;
+  font-family: 'Parisienne', cursive;
+  text-align : center;
+  transition : transform ease-out 3s;
+  transform  : translateY(0);
+}
+.folder .guest.out {
+  transform: translateY(-220px);
+}
+.folder button {
+  position     : absolute;
+  top          : 400px;
+  left         : 470px;
+  width        : 100px;
+  height       : 100px;
+  z-index      : 6;
+  border-radius: 50%;
+  background   : #c62828;
+  box-shadow   : inset 0 0 15px 10px rgba(0,0,0,0.4);
+  font-family  : 'Caveat', cursive;
+  font-size    : 1.7em;
+  color        : #690000;
+  font-weight  : bold;
+  outline      : none;
+  cursor       : pointer;
+  transition   : all 0.5s ease;
+}
+.folder button:focus,
+.folder button:hover {
+  transform: rotate(-20deg);
+}
+@-webkit-keyframes anima {
+  0%   {left:470px; transform: rotateY(0);}
+  100% {left:-50px; transform: rotateY(180deg);}
+}
+@keyframes anima {
+  0%   {left:470px; transform: rotateY(0);}
+  100% {left:-50px; transform: rotateY(180deg);}
+}
+.folder button.opened {
+  left                      : -50px;
+  z-index                   : 4;
+  transform                 : rotateY(180deg);
+  color                     : #c62828;
+  -webkit-animation-name    : anima;
+          animation-name    : anima;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.folder .right-front {
+  position  : absolute;
+  width     : 350px;
+  height    : 800px;
+  z-index   : 1;
+  background: url(images/blue-background.jpg) no-repeat center;
+  transition: transform ease-out 1s;
+}
+.folder .right-back {
+  width  : 350px;
+  margin : 1em;
+  z-index: 2;
+}
+.folder .right-back img {
+  width     : calc(100% - 2em);
+  box-sizing: border-box;
+  transition: transform ease-out 1s;
+  transform : translate(0, 200px);
+}
+.folder .right-back.slided img {
+  transform: translate(0, 10px);
+}
+.folder .cover {
+  position   : relative;
+  width      : 100%;
+  height     : 200px;
+  border     : 2px solid rgba(0,0,0,0.5);
+  margin-left: -1em;
+  box-sizing : border-box;
+  background : url("images/blue-background.jpg") no-repeat center;
+  box-shadow : 0 -5px 5px rgb(0 0 0 / 50%), 0 5px 5px rgb(0 0 0 / 50%);
+}
+
+
+footer {
+  width         : 1200px;
+  padding-bottom: 4em;
+  margin        : 0 auto;
+  text-align    : center;
+}
+footer p {
+  padding   : 0.5em 0;
+  background: rgba(0,0,0,0.7);
+}
+footer a {
+  margin-left    : -10em;
+  border-bottom  : 1px solid #FFF;
+  color          : #FFF;
+  text-decoration: none;
+}
+
+.preloader {
+  position  : fixed;
+  width     : 100%;
+  height    : 100vh;
+  min-height: 100%;
+  z-index   : 10;
+  background: #ECF0F1;
+}
+.preloader .container {
+  position: fixed;
+  width   : 100%;
+  height  : 80vh;
+}
+.load {
+  position        : absolute;
+  width           : 50px;
+  height          : 50px;
+  top             : 10%;
+  left            : 10%;
+  padding         : 5px;
+  border          : 1px solid #ECF0F1;
+}
+.load hr {
+  width            : 40%;
+  height           : 40%;
+  border           : 0;
+  margin           : 0;
+  position         : absolute;
+  border-radius    : 50%;
+  -webkit-animation: spin 2s ease infinite;
+          animation: spin 2s ease infinite;
+}
+
+.load :first-child {
+  background             : #19A68C;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s
+}
+.load :nth-child(2) {
+  background             : #F63D3A;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s
+}
+.load :nth-child(3) {
+  background             : #FDA543;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s
+}
+.load :last-child {
+  background:#193B48
+}
+@-webkit-keyframes spin {
+  0%,100% { transform:translateX(200%); }
+  25% { transform:translateY(200%); }
+  50% { transform:translateX(0); }
+  75% { transform:translateY(0); }
+}
+@keyframes spin {
+  0%,100% { transform:translateX(200%); }
+  25% { transform:translateY(200%); }
+  50% { transform:translateX(0); }
+  75% { transform:translateY(0); }
+}
