@@ -134,8 +134,7 @@ body {
   transition: transform ease-out 1s;
 }
 .folder .right-back {
-  width     : 350px;
-  height    : 800px;
+  width     : 200px;
   margin : 1em;
   z-index: 2;
 }
