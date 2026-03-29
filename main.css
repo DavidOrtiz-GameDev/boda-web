@@ -138,9 +138,8 @@ body {
   margin : 1em;
   z-index: 2;
 }
-.folder .right-back {
+.folder .right-back img {
   width     : calc(100% - 2em);
-  height    : calc(100% - 2em);
   box-sizing: border-box;
   transition: transform ease-out 1s;
   transform : translate(0, 200px);
