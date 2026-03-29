@@ -27,6 +27,7 @@ switch (parseInt(total)) {
   default:
     file = '1';
 }
+document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");
 
 document.querySelector("button").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
@@ -37,4 +38,7 @@ document.querySelector("button").addEventListener("click", function () {
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
   }, 2800);
+  setTimeout(function(){
+    document.querySelector(".right-back").classList.add("slided");
+  }, 5000);
 });
