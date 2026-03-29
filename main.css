@@ -134,17 +134,17 @@ body {
   transition: transform ease-out 1s;
 }
 .folder .right-back {
-  width  : 350px;
+  width  : calc(100% - 2em);
   margin : 1em;
   z-index: 2;
 }
-.folder .right-back {
+.folder .right-back img {
   width     : calc(100% - 2em);
   box-sizing: border-box;
   transition: transform ease-out 1s;
   transform : translate(0, 200px);
 }
-.folder .right-back.slided {
+.folder .right-back.slided img {
   transform: translate(0, 10px);
 }
 .folder .cover {
