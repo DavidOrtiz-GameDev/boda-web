@@ -2,19 +2,10 @@ window.onload = function(){
   document.querySelector(".preloader").style.display = "none";
 }
 
-let b64 = window.location.search.substr(3);
+let b64 = window.location.search.substr(2);
 let total = b64.substr(0, 1);
-const params = new URLSearchParams(window.location.search);
-const b64 = params.get('guest') || '';
-let nameGuest = '';
-
-try {
-  nameGuest = decodeURIComponent(escape(window.atob(b64)));
-} catch (e) {
-  nameGuest = '';
-}
-
-if (!nameGuest) {
+let nameGuest = decodeURIComponent(escape(window.atob( b64.substr(1) )));
+if (nameGuest === '') {
   nameGuest = 'Para un invitado especial';
 }
 document.querySelector(".guest").innerHTML = nameGuest;
