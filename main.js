@@ -4,9 +4,18 @@ window.onload = function(){
 
 let b64 = window.location.search.substr(3);
 let total = b64.substr(0, 1);
-let nameGuest = decodeURIComponent(escape(window.atob( b64.substr(1) )));
-if (nameGuest === '') {
-  nameGuest = 'Fam. Garduño Zuñiga'
+const params = new URLSearchParams(window.location.search);
+const b64 = params.get('guest') || '';
+let nameGuest = '';
+
+try {
+  nameGuest = decodeURIComponent(escape(window.atob(b64)));
+} catch (e) {
+  nameGuest = '';
+}
+
+if (!nameGuest) {
+  nameGuest = 'Para un invitado especial';
 }
 document.querySelector(".guest").innerHTML = nameGuest;
 
