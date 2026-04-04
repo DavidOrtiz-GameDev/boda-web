@@ -6,7 +6,8 @@ body {
   min-height     : -moz-fit-content;
   min-height     : fit-content;
   margin         : 0;
-  background     : url("images/wood-background.jpg") repeat-y center center fixed;
+  /*background     : url("images/wood-background.jpg") repeat-y center center fixed;*/
+  background-color: white;
   background-size: 100% 100%;
   font-family    : Helvetica, sans-serif;
 }
