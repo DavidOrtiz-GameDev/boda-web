@@ -85,7 +85,7 @@ body {
   transform  : translate(-50%, 0);
 }
 .folder .guest.out {
-  transform: translate(0, -220px);
+  transform: translate(-50%, -220px);
 }
 .folder button {
   position     : absolute;
