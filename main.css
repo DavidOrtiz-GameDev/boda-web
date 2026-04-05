@@ -45,6 +45,7 @@ body {
   transition  : all 2s ease;
 }
 .folder .center {
+  position:       : relative;
   width           : 500px;
   background-image: 
     linear-gradient(to right, rgba(0,0,0,0.4), transparent 2%), 
@@ -70,7 +71,7 @@ body {
 .folder .guest {
   position   : absolute;
   top        : 2em;
-  left       : 300px;
+  left       : 50%;
   width      : 450px;
   min-height : 1.2em;
   padding    : .2em;
@@ -81,7 +82,7 @@ body {
   font-family: 'Parisienne', cursive;
   text-align : center;
   transition : transform ease-out 3s;
-  transform  : translateY(0);
+  transform  : translate(-50%, 0);
 }
 .folder .guest.out {
   transform: translateY(-220px);
