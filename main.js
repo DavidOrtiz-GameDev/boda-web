@@ -2,9 +2,18 @@ window.onload = function(){
   document.querySelector(".preloader").style.display = "none";
 }
 
+function b64DecodeUnicode(str) {
+  return decodeURIComponent(
+    atob(str)
+      .split('')
+      .map(c => '%' + c.charCodeAt(0).toString(16).padStart(2, '0'))
+      .join('')
+  );
+}
+
 let b64 = window.location.search.substr(2);
 let total = b64.substr(0, 1);
-let nameGuest = decodeURIComponent(escape(window.atob( b64.substr(1) )));
+let nameGuest = b64DecodeUnicode(b64.substr(1));
 if (nameGuest === '') {
   nameGuest = 'Para un invitado especial';
 }
