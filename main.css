@@ -87,7 +87,7 @@ body {
 .folder .guest.out {
   transform: translate(-50%, -220px);
 }
-.folder button {
+#openEnvelope {
   position     : absolute;
   top          : 400px;
   left         : 470px;
@@ -105,8 +105,8 @@ body {
   cursor       : pointer;
   transition   : all 0.5s ease;
 }
-.folder button:focus,
-.folder button:hover {
+#openEnvelope:focus,
+#openEnvelope:hover {
   transform: rotate(-20deg);
 }
 @-webkit-keyframes anima {
@@ -117,7 +117,7 @@ body {
   0%   {left:470px; transform: rotateY(0);}
   100% {left:-50px; transform: rotateY(180deg);}
 }
-.folder button.opened {
+#openEnvelope.opened {
   left                      : -50px;
   z-index                   : 4;
   transform                 : rotateY(180deg);
