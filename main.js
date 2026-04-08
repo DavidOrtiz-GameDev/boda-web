@@ -11,7 +11,7 @@ if (nameGuest === '') {
 document.querySelector(".guest").innerHTML = nameGuest;
 
 function enviarAsistencia(asistencia, mensaje = "") {
-  fetch(https://script.google.com/macros/s/AKfycbw1ZtkIddMQ7HWPjk_Sms_ZK9TdCePe65XmUwoqMqjvC8f6VQiVZyym7Kg7_3dBSHJp/exec, {
+  fetch("https://script.google.com/macros/s/AKfycbw1ZtkIddMQ7HWPjk_Sms_ZK9TdCePe65XmUwoqMqjvC8f6VQiVZyym7Kg7_3dBSHJp/exec", {
     method: "POST",
     body: JSON.stringify({
       nameGuest: nameGuest,
