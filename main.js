@@ -44,11 +44,11 @@ switch (parseInt(total)) {
 }
 document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");
 
-document.querySelector("button").addEventListener("click", function () {
+document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
-    document.querySelector("button").classList.add("opened");
+    document.getElementById("openEnvelope").classList.add("opened");
   }, 2000);
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
