@@ -18,50 +18,57 @@ if (nameGuest === '') {
   nameGuest = 'Para un invitado especial';
 }
 document.querySelector(".guest").innerHTML = nameGuest;
+// URL del Apps Script
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzIdMumNNPn_lzHgBe7raUMPcp7dsQYTaoomjDegHANKw7Zb8oATERob_gnqp0LPOta/exec";
+
+function consultarEstadoInvitado() {
+  return fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      action: "check",
+      guestCode: b64
+    })
+  })
+  .then(r => r.json());
+}
 
 function intentarAsistencia(asistenciaElegida) {
-  fetch("https://script.google.com/macros/s/AKfycbwL9ATnj1uExEORGUB15H93KYixzTZB-BYGwjJ85lcw8z_0fiY0QJHqb2YeigMUWaNj/exec?code=" + b64)
-    .then(r => r.json())
-    .then(info => {
-      if (!info.respondio) {
-        // Caso 1: primera vez
-        mostrarPopupConfirmacion(asistenciaElegida);
-      } else {
-        if (info.asistencia === asistenciaElegida) {
-          // Caso 2.1: misma respuesta
-          mostrarPopupYaRespondido(info.asistencia);
-        } else {
-          // Caso 2.2: respuesta distinta
-          mostrarPopupCambio(asistenciaElegida, info.asistencia);
-        }
+  consultarEstadoInvitado().then(info => {
+    // Caso 1: primera vez
+    if (!info.respondio) {
+      if (confirm(
+        "¿Seguro que quieres confirmar que " +
+        (asistenciaElegida === "SI" ? "asistirás" : "no asistirás") +
+        "?"
+      )) {
+        enviarAsistencia(asistenciaElegida);
       }
-    });
-}
-
-function mostrarPopupConfirmacion(asistencia) {
-  if (confirm("¿Seguro que quieres confirmar que " + 
-      (asistencia === "SI" ? "asistirás" : "no asistirás") + "?")) {
-    enviarAsistencia(asistencia);
-  }
-}
-
-function mostrarPopupYaRespondido(asistencia) {
-  alert("Ya habías indicado que " + 
-    (asistencia === "SI" ? "asistirás." : "no asistirás."));
-}
-
-function mostrarPopupCambio(nueva, anterior) {
-  if (confirm("Antes indicaste que " + 
-      (anterior === "SI" ? "asistirías" : "no asistirías") +
-      ". ¿Quieres cambiar tu respuesta?")) {
-    enviarAsistencia(nueva);
-  }
+      return;
+    }
+    // Caso 2.1: ya respondió y pulsa la misma opción
+    if (info.asistencia === asistenciaElegida) {
+      alert(
+        "Ya habías indicado que " +
+        (asistenciaElegida === "SI" ? "asistirás." : "no asistirás.")
+      );
+      return;
+    }
+    // Caso 2.2: ya respondió pero ahora elige lo contrario
+    if (confirm(
+      "Anteriormente indicaste que " +
+      (info.asistencia === "SI" ? "asistirías" : "no asistirías") +
+      ".\n¿Quieres cambiar tu respuesta?"
+    )) {
+      enviarAsistencia(asistenciaElegida);
+    }
+  });
 }
 
 function enviarAsistencia(asistencia, mensaje = "") {
-  fetch("https://script.google.com/macros/s/AKfycbwC5ChhqePDbSXQK_M6hc4Efl7bRM0yRpcZpbbnY7pCCE5DLEkYVQ_le__nNaJrtkz-/exec", {
+  fetch(SCRIPT_URL, {
     method: "POST",
     body: JSON.stringify({
+      action: "save",
       nameGuest: nameGuest,
       guestCode: b64,
       asistencia: asistencia,
