@@ -72,7 +72,8 @@ function intentarAsistencia(asistenciaElegida) {
     if (!info.respondio) {
       showPopup(`
         <p>¿Seguro que quieres confirmar que ${asistenciaElegida === "SI" ? "asistirás" : "no asistirás"}?</p>
-        <textarea id="msg" placeholder="Si quieres, ¡puedes enviarnos un mensaje! ❤️"></textarea>
+        <p>Si quieres, ¡puedes enviarnos un mensaje! ❤️</p>
+        <textarea id="msg"></textarea>
         <button onclick="confirmar('${asistenciaElegida}')">Confirmar</button>
         <button onclick="cancelar()">Cancelar</button>
       `);
@@ -82,7 +83,8 @@ function intentarAsistencia(asistenciaElegida) {
     if (info.asistencia === asistenciaElegida) {
       showPopup(`
         <p>Ya habías indicado que ${asistenciaElegida === "SI" ? "asistirás" : "no asistirás"},</p>
-        <textarea id="msg" placeholder=" ¡pero puedes mandarnos otro mensaje si quieres! ❤️"></textarea>
+        <p>¡pero puedes mandarnos otro mensaje si quieres! ❤️</p>
+        <textarea id="msg"></textarea>
         <button onclick="confirmar('${asistenciaElegida}')">Añadir mensaje</button>
         <button onclick="cancelar()">Cerrar</button>
       `);
@@ -92,7 +94,8 @@ function intentarAsistencia(asistenciaElegida) {
     showPopup(`
       <p>Anteriormente indicaste que ${info.asistencia === "SI" ? "asistirías" : "no asistirías"}.</p>
       <p>¿Quieres cambiar tu respuesta?</p>
-      <textarea id="msg" placeholder="Puedes añadir otro mensaje si quieres. ❤️"></textarea>
+      <p>Puedes añadir otro mensaje si quieres. ❤️</p>
+      <textarea id="msg"></textarea>
       <button onclick="confirmar('${asistenciaElegida}')">Cambiar</button>
       <button onclick="cancelar()">Cancelar</button>
     `);
