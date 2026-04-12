@@ -20,7 +20,7 @@ if (nameGuest === '') {
 document.querySelector(".guest").innerHTML = nameGuest;
 
 function intentarAsistencia(asistenciaElegida) {
-  fetch("https://script.google.com/macros/s/AKfycbwC5ChhqePDbSXQK_M6hc4Efl7bRM0yRpcZpbbnY7pCCE5DLEkYVQ_le__nNaJrtkz-/exec?name=" + encodeURIComponent(nameGuest))
+  fetch("https://script.google.com/macros/s/AKfycbwL9ATnj1uExEORGUB15H93KYixzTZB-BYGwjJ85lcw8z_0fiY0QJHqb2YeigMUWaNj/exec?code=" + b64)
     .then(r => r.json())
     .then(info => {
       if (!info.respondio) {
