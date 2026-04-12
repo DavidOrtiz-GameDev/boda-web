@@ -19,7 +19,7 @@ if (nameGuest === '') {
 }
 document.querySelector(".guest").innerHTML = nameGuest;
 // URL del Apps Script
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzp-y1wnuY6Qcr56IhEN9OUSfb1xPM3qYLiOQoKe3t7xEv-chtKgZDRx3QcH4yCOHlA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbBywUnSyjB9r2ujHkQziUY8VoGszXwxy06a-FTts87Ni6RGBwR8Xmp78Sqjlu_7SK/exec";
 
 function consultarEstadoInvitado() {
   return fetch(SCRIPT_URL, {
