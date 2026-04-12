@@ -21,6 +21,16 @@ document.querySelector(".guest").innerHTML = nameGuest;
 // URL del Apps Script
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbBywUnSyjB9r2ujHkQziUY8VoGszXwxy06a-FTts87Ni6RGBwR8Xmp78Sqjlu_7SK/exec";
 
+function desactivarBotones() {
+  document.getElementById("btnSi").disabled = true;
+  document.getElementById("btnNo").disabled = true;
+}
+
+function activarBotones() {
+  document.getElementById("btnSi").disabled = false;
+  document.getElementById("btnNo").disabled = false;
+}
+
 function consultarEstadoInvitado() {
   return fetch(SCRIPT_URL, {
     method: "POST",
@@ -33,9 +43,11 @@ function consultarEstadoInvitado() {
 }
 
 function intentarAsistencia(asistenciaElegida) {
+  desactivarBotones();
   consultarEstadoInvitado().then(info => {
     // Caso 1: primera vez
     if (!info.respondio) {
+      activarBotones();
       if (confirm(
         "¿Seguro que quieres confirmar que " +
         (asistenciaElegida === "SI" ? "asistirás" : "no asistirás") +
@@ -47,6 +59,7 @@ function intentarAsistencia(asistenciaElegida) {
     }
     // Caso 2.1: ya respondió y pulsa la misma opción
     if (info.asistencia === asistenciaElegida) {
+      activarBotones();
       alert(
         "Ya habías indicado que " +
         (asistenciaElegida === "SI" ? "asistirás." : "no asistirás.")
@@ -54,6 +67,7 @@ function intentarAsistencia(asistenciaElegida) {
       return;
     }
     // Caso 2.2: ya respondió pero ahora elige lo contrario
+    activarBotones();
     if (confirm(
       "Anteriormente indicaste que " +
       (info.asistencia === "SI" ? "asistirías" : "no asistirías") +
