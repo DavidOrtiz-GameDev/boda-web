@@ -107,7 +107,10 @@ function enviarAsistencia(asistencia, mensaje = "") {
   })
   .then(r => r.json())
   .then(res => {
-    alert("¡Gracias por confirmar!");
+    showPopup(`
+        <p>¡Gracias por confirmar!</p>
+        <button onclick="cancelar()">Aceptar</button>
+      `);
   });
 }
 
