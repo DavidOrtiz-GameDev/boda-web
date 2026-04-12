@@ -19,11 +19,51 @@ if (nameGuest === '') {
 }
 document.querySelector(".guest").innerHTML = nameGuest;
 
+function intentarAsistencia(asistenciaElegida) {
+  fetch("https://script.google.com/macros/s/AKfycbwC5ChhqePDbSXQK_M6hc4Efl7bRM0yRpcZpbbnY7pCCE5DLEkYVQ_le__nNaJrtkz-/exec?name=" + encodeURIComponent(nameGuest))
+    .then(r => r.json())
+    .then(info => {
+      if (!info.respondio) {
+        // Caso 1: primera vez
+        mostrarPopupConfirmacion(asistenciaElegida);
+      } else {
+        if (info.asistencia === asistenciaElegida) {
+          // Caso 2.1: misma respuesta
+          mostrarPopupYaRespondido(info.asistencia);
+        } else {
+          // Caso 2.2: respuesta distinta
+          mostrarPopupCambio(asistenciaElegida, info.asistencia);
+        }
+      }
+    });
+}
+
+function mostrarPopupConfirmacion(asistencia) {
+  if (confirm("¿Seguro que quieres confirmar que " + 
+      (asistencia === "SI" ? "asistirás" : "no asistirás") + "?")) {
+    enviarAsistencia(asistencia);
+  }
+}
+
+function mostrarPopupYaRespondido(asistencia) {
+  alert("Ya habías indicado que " + 
+    (asistencia === "SI" ? "asistirás." : "no asistirás."));
+}
+
+function mostrarPopupCambio(nueva, anterior) {
+  if (confirm("Antes indicaste que " + 
+      (anterior === "SI" ? "asistirías" : "no asistirías") +
+      ". ¿Quieres cambiar tu respuesta?")) {
+    enviarAsistencia(nueva);
+  }
+}
+
 function enviarAsistencia(asistencia, mensaje = "") {
-  fetch("https://script.google.com/macros/s/AKfycbw1ZtkIddMQ7HWPjk_Sms_ZK9TdCePe65XmUwoqMqjvC8f6VQiVZyym7Kg7_3dBSHJp/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwC5ChhqePDbSXQK_M6hc4Efl7bRM0yRpcZpbbnY7pCCE5DLEkYVQ_le__nNaJrtkz-/exec", {
     method: "POST",
     body: JSON.stringify({
       nameGuest: nameGuest,
+      guestCode: b64,
       asistencia: asistencia,
       mensaje: mensaje
     })
