@@ -188,6 +188,17 @@ body {
   margin: 8px 6px 0;
 }
 
+.popup-content textarea {
+  width: 90%;
+  max-width: 360px;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  resize: vertical;
+}
+
 footer {
   width         : 1200px;
   padding-bottom: 4em;
