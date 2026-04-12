@@ -31,6 +31,26 @@ function activarBotones() {
   document.getElementById("btnNo").disabled = false;
 }
 
+function showPopup(html) {
+  document.getElementById("popup-content").innerHTML = html;
+  document.getElementById("popup").classList.remove("hidden");
+}
+
+function hidePopup() {
+  document.getElementById("popup").classList.add("hidden");
+}
+
+function confirmar(asistencia) {
+  showPopup("<p>Actualizando datos...</p>");
+  enviarAsistencia(asistencia);
+  activarBotones();
+}
+
+function cancelar() {
+  hidePopup();
+  activarBotones();
+}
+
 function consultarEstadoInvitado() {
   return fetch(SCRIPT_URL, {
     method: "POST",
@@ -44,37 +64,33 @@ function consultarEstadoInvitado() {
 
 function intentarAsistencia(asistenciaElegida) {
   desactivarBotones();
+  showPopup("<p>Revisando la lista de invitados...</p>");
+  
   consultarEstadoInvitado().then(info => {
     // Caso 1: primera vez
     if (!info.respondio) {
-      activarBotones();
-      if (confirm(
-        "¿Seguro que quieres confirmar que " +
-        (asistenciaElegida === "SI" ? "asistirás" : "no asistirás") +
-        "?"
-      )) {
-        enviarAsistencia(asistenciaElegida);
-      }
+      showPopup(`
+        <p>¿Seguro que quieres confirmar que ${asistenciaElegida === "SI" ? "asistirás" : "no asistirás"}?</p>
+        <button onclick="confirmar('${asistenciaElegida}')">Confirmar</button>
+        <button onclick="cancelar()">Cancelar</button>
+      `);
       return;
     }
     // Caso 2.1: ya respondió y pulsa la misma opción
     if (info.asistencia === asistenciaElegida) {
-      activarBotones();
-      alert(
-        "Ya habías indicado que " +
-        (asistenciaElegida === "SI" ? "asistirás." : "no asistirás.")
-      );
+      showPopup(`
+        <p>Ya habías indicado que ${asistenciaElegida === "SI" ? "asistirás" : "no asistirás"}.</p>
+        <button onclick="cancelar()">Aceptar</button>
+      `);
       return;
     }
     // Caso 2.2: ya respondió pero ahora elige lo contrario
-    activarBotones();
-    if (confirm(
-      "Anteriormente indicaste que " +
-      (info.asistencia === "SI" ? "asistirías" : "no asistirías") +
-      ".\n¿Quieres cambiar tu respuesta?"
-    )) {
-      enviarAsistencia(asistenciaElegida);
-    }
+    showPopup(`
+      <p>Anteriormente indicaste que ${info.asistencia === "SI" ? "asistirías" : "no asistirías"}.</p>
+      <p>¿Quieres cambiar tu respuesta?</p>
+      <button onclick="confirmar('${asistenciaElegida}')">Cambiar</button>
+      <button onclick="cancelar()">Cancelar</button>
+    `);
   });
 }
 
