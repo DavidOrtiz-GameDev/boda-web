@@ -7,6 +7,10 @@
     width: 300vw; /* left + center + right */
     transition: transform 0.5s ease;
   }
+  .folder {
+    transform: scale(1);
+    width: 100vw;
+  }
   .folder .left,
   .folder .center,
   .folder .right {
@@ -55,15 +59,14 @@ body {
 }
 .content {
   padding   : 0 1.5em;
-  width     : 100%;
-  min-width : 850px;
+  width     : 300vw;
   box-sizing: border-box;
 }
 
 .folder {
   position      : relative;
-  width         : 1200px;
-  height        : 1060px;
+  width         : 100vw;
+  height        : 100vw;
   padding-top   : 3em;
   padding-bottom: 1em;
   display       : flex;
