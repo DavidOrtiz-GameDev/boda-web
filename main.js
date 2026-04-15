@@ -122,6 +122,38 @@ function enviarAsistencia(asistencia, mensaje = "") {
   });
 }
 
+let currentView = "center"; // estado inicial
+
+function updateView() {
+  const content = document.querySelector(".content");
+  if (currentView === "center") {
+    content.style.transform = "translateX(0)";
+    document.getElementById("nav-left").classList.remove("hidden");
+    document.getElementById("nav-right").classList.remove("hidden");
+  }
+  if (currentView === "left") {
+    content.style.transform = "translateX(33.33%)";
+    document.getElementById("nav-left").classList.add("hidden");
+    document.getElementById("nav-right").classList.remove("hidden");
+  }
+  if (currentView === "right") {
+    content.style.transform = "translateX(-33.33%)";
+    document.getElementById("nav-right").classList.add("hidden");
+    document.getElementById("nav-left").classList.remove("hidden");
+  }
+}
+// Eventos de flechas
+document.getElementById("nav-left").onclick = () => {
+  if (currentView === "center") currentView = "left";
+  else if (currentView === "right") currentView = "center";
+  updateView();
+};
+document.getElementById("nav-right").onclick = () => {
+  if (currentView === "center") currentView = "right";
+  else if (currentView === "left") currentView = "center";
+  updateView();
+};
+
 let file;
 switch (parseInt(total)) {
   case 2:
@@ -147,6 +179,9 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".folder").classList.remove("closed");
     document.getElementById("openEnvelope").classList.add("opened");
   }, 2000);
+  document.getElementById("nav-left").classList.remove("hidden");
+  document.getElementById("nav-right").classList.remove("hidden");
+  updateView();
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
   }, 2800);
