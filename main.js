@@ -123,32 +123,34 @@ function enviarAsistencia(asistencia, mensaje = "") {
 }
 
 let currentView = "center"; // estado inicial
+const navLeft = document.getElementById("nav-left");
+const navRight = document.getElementById("nav-right");
 
 function updateView() {
   const content = document.querySelector(".content");
   if (currentView === "center") {
-    content.style.transform = "translateX(0)";
-    document.getElementById("nav-left").classList.remove("hidden");
-    document.getElementById("nav-right").classList.remove("hidden");
+    content.style.transform = "translateX(-100vw)";
+    navLeft.classList.remove("hidden");
+    navRight.classList.remove("hidden");
   }
   if (currentView === "left") {
-    content.style.transform = "translateX(33.33%)";
-    document.getElementById("nav-left").classList.add("hidden");
-    document.getElementById("nav-right").classList.remove("hidden");
+    content.style.transform = "translateX(0)";
+    navLeft.classList.add("hidden");
+    navRight.classList.remove("hidden");
   }
   if (currentView === "right") {
-    content.style.transform = "translateX(-33.33%)";
-    document.getElementById("nav-right").classList.add("hidden");
-    document.getElementById("nav-left").classList.remove("hidden");
+    content.style.transform = "translateX(-200vw)";
+    navRight.classList.add("hidden");
+    navLeft.classList.remove("hidden");
   }
 }
 // Eventos de flechas
-document.getElementById("nav-left").onclick = () => {
+navLeft.onclick = () => {
   if (currentView === "center") currentView = "left";
   else if (currentView === "right") currentView = "center";
   updateView();
 };
-document.getElementById("nav-right").onclick = () => {
+navRight.onclick = () => {
   if (currentView === "center") currentView = "right";
   else if (currentView === "left") currentView = "center";
   updateView();
