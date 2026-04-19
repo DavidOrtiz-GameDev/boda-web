@@ -165,14 +165,14 @@ function updateView() {
 }
 // Eventos de flechas
 navLeft.onclick = () => {
+  updateView();
   if (currentView === "center") currentView = "left";
   else if (currentView === "right") currentView = "center";
-  updateView();
 };
 navRight.onclick = () => {
+  updateView();
   if (currentView === "center") currentView = "right";
   else if (currentView === "left") currentView = "center";
-  updateView();
 };
 
 document.getElementById("openEnvelope").addEventListener("click", function () {
