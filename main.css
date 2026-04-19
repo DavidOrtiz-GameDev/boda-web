@@ -13,12 +13,10 @@ body {
 }
 .content {
   /*padding: 0 1.5em;*/
-  width: 300vw;
   box-sizing: border-box;
   transition: transform 0.5s ease;
 }
 .folder {
-  position: relative;
   height: 90vh;
   /*padding-top: 3em;
   padding-bottom: 1em;*/
