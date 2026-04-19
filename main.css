@@ -1,77 +1,33 @@
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-  .content {
-    display: flex;
-    width: 300vw; /* left + center + right */
-    transition: transform 0.5s ease;
-  }
-  .folder {
-    transform: scale(1);
-    width: 100vw;
-    height: 90vh;
-  }
-  .folder .left,
-  .folder .center,
-  .folder .right {
-    width: 100vw;
-    flex-shrink: 0;
-  }
-  .nav-arrow {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: #444;
-    background: rgba(255,255,255,0.85);
-    padding: 10px 14px;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 9999;
-    cursor: pointer;
-    user-select: none;
-    transition: opacity 0.3s;
-  }
-  #nav-left {
-    left: 10px;
-  }
-  #nav-right {
-    right: 10px;
-  }
-  .nav-arrow.hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
-
 body {
-  min-width       : -webkit-fit-content;
-  min-width       : -moz-fit-content;
-  min-width       : fit-content;
-  min-height      : -webkit-fit-content;
-  min-height      : -moz-fit-content;
-  min-height      : fit-content;
-  margin          : 0;
-  /*background    : url("images/wood-background.jpg") repeat-y center center fixed;*/
+  /*min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;*/
+  width: 100vw;
+  min-width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+  /*background: url("images/wood-background.jpg") repeat-y center center fixed;*/
   background-color: black;
-  background-size : 100% 100%;
-  font-family     : Helvetica, sans-serif;
+  background-size: 100% 100%;
+  font-family: Helvetica, sans-serif;
 }
 .content {
-  /*padding   : 0 1.5em;*/
-  width     : 300vw;
+  /*padding: 0 1.5em;*/
+  width: 300vw;
   box-sizing: border-box;
 }
 
 .folder {
-  position      : relative;
-  width         : 100vw;
-  height        : 90vh;
-  padding-top   : 3em;
+  position: relative;
+  width: 300vw;
+  height: 90vh;
+  padding-top: 3em;
   padding-bottom: 1em;
-  display       : flex;
-  margin        : 0 auto;
+  display: flex;
+  margin: 0 auto;
 }
 
 .folder .left,
@@ -79,31 +35,31 @@ body {
   background: url("images/blue-background.jpg") no-repeat center;
 }
 .folder .left {
-  width      : 100vw;
-  z-index    : 5;
+  width: 100vw;
+  z-index: 5;
   border-left: 2px solid rgba(0,0,0,0.4);
-  transition : all 2.5s ease;
+  transition: all 2.5s ease;
 }
 .folder .right {
-  width       : 100vw;
-  z-index     : 3;
+  width: 100vw;
+  z-index: 3;
   border-right: 2px solid rgba(0,0,0,0.4);
-  transition  : all 2s ease;
+  transition: all 2s ease;
 }
 .folder .center {
-  position        : relative;
-  width           : 100vw;
+  position: relative;
+  width: 100vw;
   background-image: 
     linear-gradient(to right, rgba(0,0,0,0.4), transparent 2%), 
     linear-gradient(to left, rgba(0,0,0,0.4), transparent 2%), 
     url("images/blue-background.jpg");
-  background-repeat  : no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
 }
 .folder .paper-one {
-  width     : calc(100% - 2em);
-  height    : calc(100% - 2em);
-  margin    : 1em;
+  width: calc(100% - 2em);
+  height: calc(100% - 2em);
+  margin: 1em;
   box-sizing: border-box;
 }
 .folder.closed .left {
@@ -344,4 +300,51 @@ footer a {
   25% { transform:translateY(200%); }
   50% { transform:translateX(0); }
   75% { transform:translateY(0); }
+}
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  .content {
+    display: flex;
+    width: 300vw; /* left + center + right */
+    transition: transform 0.5s ease;
+  }
+  .folder {
+    transform: scale(1);
+    width: 300vw;
+    height: 90vh;
+    display: flex;
+  }
+  .folder .left,
+  .folder .center,
+  .folder .right {
+    width: 100vw;
+    flex-shrink: 0;
+  }
+  .nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #444;
+    background: rgba(255,255,255,0.85);
+    padding: 10px 14px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.3s;
+  }
+  #nav-left {
+    left: 10px;
+  }
+  #nav-right {
+    right: 10px;
+  }
+  .nav-arrow.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
