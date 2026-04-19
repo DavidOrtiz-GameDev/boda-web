@@ -1,11 +1,11 @@
 body {
-  min-width: -webkit-fit-content;
+  /*min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  margin: 0;
+  margin: 0;*/
   /*background: url("images/wood-background.jpg") repeat-y center center fixed;*/
   background-color: black;
   background-size: 100% 100%;
@@ -26,7 +26,7 @@ body {
   transition: width 0.8s ease;
 }
 .folder.closed {
-  width: 100vw;
+  width: 95vw;
 }
 .folder:not(.closed) {
   width: 300vw;
@@ -80,10 +80,10 @@ body {
   transform-origin: center left;
 }
 .folder .guest {
-  position   : absolute;
+  position   : relative;
   top        : 0.5em;
   left       : 50%;
-  width      : 450px;
+  width      : 90vw;
   min-height : 1.2em;
   padding    : .2em;
   z-index    : 7;
@@ -100,8 +100,8 @@ body {
 }
 #openEnvelope {
   position     : absolute;
-  top          : 400px;
-  left         : 470px;
+  top          : 45%;
+  left         : 40%;
   width        : 100px;
   height       : 100px;
   z-index      : 6;
@@ -231,17 +231,17 @@ body {
   pointer-events: none;
 }
 footer {
-  width         : 1200px;
-  padding-bottom: 4em;
+  width         : 50%;
+  /*padding-bottom: 4em;*/
   margin        : 0 auto;
   text-align    : center;
 }
 footer p {
-  padding   : 0.5em 0;
+  /*padding   : 0 45vw;*/
   background: rgba(0,0,0,0.7);
 }
 footer a {
-  margin-left    : -10em;
+  /*margin-left    : -10em;*/
   border-bottom  : 1px solid #FFF;
   color          : #FFF;
   text-decoration: none;
@@ -313,8 +313,5 @@ footer a {
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
-  }
-  .folder {
-    height: 100vh;
   }
 }
