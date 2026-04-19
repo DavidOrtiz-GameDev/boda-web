@@ -10,6 +10,7 @@
   .folder {
     transform: scale(1);
     width: 100vw;
+    height: 90vh;
   }
   .folder .left,
   .folder .center,
@@ -58,7 +59,7 @@ body {
   font-family     : Helvetica, sans-serif;
 }
 .content {
-  padding   : 0 1.5em;
+  /*padding   : 0 1.5em;*/
   width     : 300vw;
   box-sizing: border-box;
 }
@@ -66,7 +67,7 @@ body {
 .folder {
   position      : relative;
   width         : 100vw;
-  height        : 100vw;
+  height        : 90vh;
   padding-top   : 3em;
   padding-bottom: 1em;
   display       : flex;
@@ -78,20 +79,20 @@ body {
   background: url("images/blue-background.jpg") no-repeat center;
 }
 .folder .left {
-  width      : 260px;
+  width      : 100vw;
   z-index    : 5;
   border-left: 2px solid rgba(0,0,0,0.4);
   transition : all 2.5s ease;
 }
 .folder .right {
-  width       : 350px;
+  width       : 100vw;
   z-index     : 3;
   border-right: 2px solid rgba(0,0,0,0.4);
   transition  : all 2s ease;
 }
 .folder .center {
   position        : relative;
-  width           : 500px;
+  width           : 100vw;
   background-image: 
     linear-gradient(to right, rgba(0,0,0,0.4), transparent 2%), 
     linear-gradient(to left, rgba(0,0,0,0.4), transparent 2%), 
