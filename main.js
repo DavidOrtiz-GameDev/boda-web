@@ -122,6 +122,25 @@ function enviarAsistencia(asistencia, mensaje = "") {
   });
 }
 
+let file;
+switch (parseInt(total)) {
+  case 2:
+    file = '2';
+    break;
+  case 3:
+    file = '3';
+    break;
+  case 4:
+    file = '4';
+    break;
+  case 5:
+    file = '5';
+    break;
+  default:
+    file = '1';
+}
+document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");
+
 let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
 const navRight = document.getElementById("nav-right");
@@ -156,38 +175,21 @@ navRight.onclick = () => {
   updateView();
 };
 
-let file;
-switch (parseInt(total)) {
-  case 2:
-    file = '2';
-    break;
-  case 3:
-    file = '3';
-    break;
-  case 4:
-    file = '4';
-    break;
-  case 5:
-    file = '5';
-    break;
-  default:
-    file = '1';
-}
-document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");
-
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
     document.getElementById("openEnvelope").classList.add("opened");
   }, 2000);
-  document.getElementById("nav-left").classList.remove("hidden");
-  document.getElementById("nav-right").classList.remove("hidden");
-  updateView();
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
   }, 2800);
   setTimeout(function(){
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
+  setTimeout(() => {
+    updateView();
+    navLeft.classList.remove("hidden");
+    navRight.classList.remove("hidden");
+  }, 5200);
 });
