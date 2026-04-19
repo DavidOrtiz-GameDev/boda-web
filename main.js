@@ -188,6 +188,7 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
   setTimeout(() => {
+    updateView();
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }, 5200);
