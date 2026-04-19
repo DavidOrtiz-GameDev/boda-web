@@ -165,14 +165,14 @@ function updateView() {
 }
 // Eventos de flechas
 navLeft.onclick = () => {
-  updateView();
   if (currentView === "center") currentView = "left";
   else if (currentView === "right") currentView = "center";
+  updateView();
 };
 navRight.onclick = () => {
-  updateView();
   if (currentView === "center") currentView = "right";
   else if (currentView === "left") currentView = "center";
+  updateView();
 };
 
 document.getElementById("openEnvelope").addEventListener("click", function () {
@@ -188,7 +188,7 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
   setTimeout(() => {
-    updateView();
+    content.style.transform = "translateX(0)";
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }, 5200);
