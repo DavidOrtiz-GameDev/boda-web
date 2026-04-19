@@ -33,11 +33,15 @@ body {
 .folder:not(.closed) {
   width: 300vw;
 }
+.folder:not(.closed) .left,
+.folder:not(.closed) .center,
+.folder:not(.closed) .right{
+  flex-shrink: 0;
+}
 .folder .left,
 .folder .center,
 .folder .right {
   width: 100vw;
-  flex-shrink: 0;
 }
 .folder .left,
 .folder .right {
