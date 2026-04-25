@@ -202,8 +202,6 @@ navRight.onclick = () => {
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   document.getElementById("openEnvelope").classList.add("opened");
-  left.classList.add("toLeft");
-  right.classList.add("toRight");
   updateView();
   document.querySelector(".folder").classList.remove("closed");
   document.querySelector(".guest.out").style.display = "none";
@@ -215,7 +213,6 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   }, 2000);*/
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
-    center.classList.add("toCenter");
   }, 2800);
   setTimeout(function(){
     document.querySelector(".right-back").classList.add("slided");
