@@ -372,7 +372,7 @@
   .folder .right{
     width: 100vw;
     flex-shrink: 0;
-    transition: width linear 0.01s, transform ease-out 0.5s, opacity ease 0.1s;
+    transition: all 2.5s ease;
   }
   /*.folder .left.toLeft,
   .folder .center.toLeft{
@@ -424,12 +424,12 @@
     height: 0%;
   }
   .folder.closed .left {
-    transform       : rotateY(180deg);
-    /*transform-origin: center right;*/
+    transform       : rotateY(180deg) translateX(50vw);
+    transform-origin: center right;
   }
   .folder.closed .right {
-    transform       : rotateY(180deg);
-    /*transform-origin: center left;*/
+    transform       : rotateY(180deg) translateX(-50vw);
+    transform-origin: center left;
   }
   .folder .guest {
     position   : relative;
