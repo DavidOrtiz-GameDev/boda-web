@@ -180,9 +180,9 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
     document.getElementById("openEnvelope").classList.add("opened");
-    document.querySelector(".footer").style.width = "300vw";
-    content.style.transform = "translateX(-100vw)";
+    document.querySelector("footer").style.width = "300vw";
     document.querySelector(".guest.out").style.display = "none";
+    updateView();
   }, 2000);
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
