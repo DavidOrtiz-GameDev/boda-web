@@ -348,7 +348,7 @@
     transition: transform 0.5s ease;
   }
   .folder {
-    width: 100vw;
+    width: 300vw;
     height: 90vh;
     /*padding-top: 3em;
     padding-bottom: 1em;*/
@@ -366,26 +366,15 @@
   .folder.closed .center{
     width: 0vw;
   }
-  /*.folder:not(.closed) {
-    width: 300vw;
-  }*/
-  .folder:not(.closed) .left,
-  .folder:not(.closed) .center,
-  .folder:not(.closed) .right{
+  .folder.closed {
+    width: 100vw;
+  }
+  .folder .left,
+  .folder .center,
+  .folder .right{
     width: 100vw;
     flex-shrink: 0;
   }
-  .folder:not(.closed) .left,
-  .folder:not(.closed) .right,
-  .folder:not(.closed) .right-front,
-  .folder:not(.closed) .right-back{
-    width: 30vw;
-  }
-  /*.folder .left,
-  .folder .center,
-  .folder .right {
-    width: 100vw;
-  }*/
   .folder .left,
   .folder .right {
     background: url("images/blue-background.jpg") no-repeat center;
@@ -578,7 +567,7 @@
     pointer-events: none;
   }
   footer {
-    width         : 50%;
+    width         : 100vw;
     /*padding-bottom: 4em;*/
     margin        : 0 auto;
     text-align    : center;
