@@ -177,9 +177,9 @@ navRight.onclick = () => {
 
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
+  document.getElementById("openEnvelope").classList.add("opened");
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
-    document.getElementById("openEnvelope").classList.add("opened");
     document.querySelector("footer").style.width = "300vw";
     document.querySelector(".guest.out").style.display = "none";
     updateView();
