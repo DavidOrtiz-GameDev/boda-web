@@ -372,20 +372,23 @@
   .folder .right{
     width: 100vw;
     flex-shrink: 0;
-    transition: transform ease-out 2s;
+    transition: all ease-out 2s;
   }
   .folder .left.toLeft,
   .folder .center.toLeft{
     transform: translateX(-100vw);
+    display: none;
   }
   .folder .left.toCenter,
   .folder .center.toCenter,
   .folder .right.toCenter{
     transform: translateX(0);
+    display: block;
   }
   .folder .center.toRight,
   .folder .right.toRight{
     transform: translateX(100vw);
+    display: none;
   }
   .folder .left,
   .folder .right {
