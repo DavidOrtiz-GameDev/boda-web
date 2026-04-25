@@ -177,9 +177,11 @@ navRight.onclick = () => {
 
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
-  document.getElementById("openEnvelope").classList.add("opened");
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
+    document.getElementById("openEnvelope").classList.add("opened");
+    document.querySelector(".footer").style.width: 300vw;
+    document.querySelector(".guest").style.display = "none";
   }, 2000);
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
