@@ -153,12 +153,14 @@ function updateView() {
   if (currentView === "center") {
     /*content.style.transform = "translateX(-100vw)";*/
     left.style.display = "none";
+    center.style.display = "block";
     right.style.display = "none";
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }
   if (currentView === "left") {
     /*content.style.transform = "translateX(0)";*/
+    left.style.display = "block";
     center.style.display = "none";
     right.style.display = "none";
     navLeft.classList.add("hidden");
@@ -168,19 +170,36 @@ function updateView() {
     /*content.style.transform = "translateX(-200vw)";*/
     left.style.display = "none";
     center.style.display = "none";
+    right.style.display = "block";
     navRight.classList.add("hidden");
     navLeft.classList.remove("hidden");
   }
 }
 // Eventos de flechas
 navLeft.onclick = () => {
-  if (currentView === "center") currentView = "left";
-  else if (currentView === "right") currentView = "center";
+  if (currentView === "center") {
+    currentView = "left";
+    center.style.transform = "translateX(100vw)";
+    left.style.transform = "translateX(0)";
+  }
+  else if (currentView === "right") {
+    currentView = "center";
+    right.style.transform = "translateX(100vw)";
+    center.style.transform = "translateX(0)";
+  }
   updateView();
 };
 navRight.onclick = () => {
-  if (currentView === "center") currentView = "right";
-  else if (currentView === "left") currentView = "center";
+  if (currentView === "center") {
+    currentView = "right";
+    right.style.transform = "translateX(0)";
+    center.style.transform = "translateX(-100vw)";
+  }
+  else if (currentView === "left") {
+    currentView = "center";
+    center.style.transform = "translateX(0)";
+    left.style.transform = "translateX(-100vw)";
+  }
   updateView();
 };
 
