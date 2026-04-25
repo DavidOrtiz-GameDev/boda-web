@@ -335,6 +335,7 @@
     min-height: -webkit-fit-content;
     min-height: -moz-fit-content;
     min-height: fit-content;*/
+    height: 90vh;
     overflow-x: hidden;
     margin: 10px 0px;
     /*background: url("images/wood-background.jpg") repeat-y center center fixed;*/
