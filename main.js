@@ -144,9 +144,9 @@ document.querySelector(".right-back img").setAttribute("src", "images/paper-two-
 let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
 const navRight = document.getElementById("nav-right");
+const content = document.querySelector(".content");
 
 function updateView() {
-  const content = document.querySelector(".content");
   if (currentView === "center") {
     content.style.transform = "translateX(-100vw)";
     navLeft.classList.remove("hidden");
@@ -177,9 +177,9 @@ navRight.onclick = () => {
 
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
+  document.getElementById("openEnvelope").classList.add("opened");
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
-    document.getElementById("openEnvelope").classList.add("opened");
   }, 2000);
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
