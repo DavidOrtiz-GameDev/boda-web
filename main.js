@@ -217,8 +217,10 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   updateView();
   document.querySelector(".guest.out").style.display = "none";
   document.querySelector(".folder").classList.remove("closed");
-  left.style.transform = "translateX(-50vw)";
-  right.style.transform = "translateX(50vw)";
+  center.style.transform = "translateX(-100vw)";
+  left.style.transform = "translateX(-100vw)";
+  center.style.width = "100vw";
+  right.style.transform = "translateX(100vw)";
   /*document.querySelector(".folder").classList.remove("closed");
   left.style.transform = "translateX(-100vw)";
   center.style.transform = "translateX(-100vw)";
