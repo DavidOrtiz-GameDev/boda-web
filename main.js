@@ -167,34 +167,46 @@ function updateView() {
 navLeft.onclick = () => {
   if (currentView === "center") {
     currentView = "left";
-    center.classList.remove("toCenter");
+    left.style.transform = "translateX(0vw)";
+    center.style.transform = "translateX(0vw)";
+    right.style.transform = "translateX(0vw)";
+    /*center.classList.remove("toCenter");
     center.classList.add("toRight");
     left.classList.remove("toLeft");
-    left.classList.add("toCenter");
+    left.classList.add("toCenter");*/
   }
   else if (currentView === "right") {
     currentView = "center";
-    right.classList.remove("toCenter");
+    left.style.transform = "translateX(-100vw)";
+    center.style.transform = "translateX(-100vw)";
+    right.style.transform = "translateX(-100vw)";
+    /*right.classList.remove("toCenter");
     right.classList.add("toRight");
     center.classList.remove("toLeft");
-    center.classList.add("toCenter");
+    center.classList.add("toCenter");*/
   }
   updateView();
 };
 navRight.onclick = () => {
   if (currentView === "center") {
     currentView = "right";
-    right.classList.remove("toRight");
+    left.style.transform = "translateX(-200vw)";
+    center.style.transform = "translateX(-200vw)";
+    right.style.transform = "translateX(-200vw)";
+    /*right.classList.remove("toRight");
     right.classList.add("toCenter");
     center.classList.remove("toCenter");
-    center.classList.add("toLeft");
+    center.classList.add("toLeft");*/
   }
   else if (currentView === "left") {
     currentView = "center";
-    center.classList.remove("toRight");
+    left.style.transform = "translateX(-100vw)";
+    center.style.transform = "translateX(-100vw)";
+    right.style.transform = "translateX(-100vw)";
+    /*center.classList.remove("toRight");
     center.classList.add("toCenter");
     left.classList.remove("toCenter");
-    left.classList.add("toLeft");
+    left.classList.add("toLeft");*/
   }
   updateView();
 };
@@ -204,8 +216,9 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   document.getElementById("openEnvelope").classList.add("opened");
   updateView();
   document.querySelector(".folder").classList.remove("closed");
-  left.classList.add("toLeft");
-  right.classList.add("toRight");
+  left.style.transform = "translateX(-100vw)";
+  center.style.transform = "translateX(-100vw)";
+  right.style.transform = "translateX(-100vw)";
   document.querySelector(".guest.out").style.display = "none";
   /*setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
