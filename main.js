@@ -204,6 +204,8 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   document.getElementById("openEnvelope").classList.add("opened");
   updateView();
   document.querySelector(".folder").classList.remove("closed");
+  left.classList.add("toLeft");
+  right.classList.add("toRight");
   document.querySelector(".guest.out").style.display = "none";
   /*setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
@@ -217,8 +219,8 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   setTimeout(function(){
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
-  setTimeout(() => {
+  /*setTimeout(() => {
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
-  }, 5200);
+  }, 5200);*/
 });
