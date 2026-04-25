@@ -372,7 +372,7 @@
   .folder .right{
     width: 100vw;
     flex-shrink: 0;
-    transition: transform ease-out 2s, opacity ease-out 2s;
+    transition: width linear 0.01s, transform ease-out 0.5s, opacity ease 0.1s;
   }
   .folder .left.toLeft,
   .folder .center.toLeft{
