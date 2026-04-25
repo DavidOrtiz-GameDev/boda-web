@@ -181,7 +181,8 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".folder").classList.remove("closed");
     document.getElementById("openEnvelope").classList.add("opened");
     document.querySelector(".footer").style.width = "300vw";
-    document.querySelector(".guest").style.display = "none";
+    content.style.transform = "translateX(-100vw)";
+    document.querySelector(".guest.out").style.display = "none";
   }, 2000);
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
@@ -190,7 +191,6 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
   setTimeout(() => {
-    content.style.transform = "translateX(-100vw)";
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }, 5200);
