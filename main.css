@@ -363,7 +363,7 @@
   .folder.closed .right-back{
     width: 50vw;
   }
-  .folder.closed center{
+  .folder.closed .center{
     width: 0vw;
   }
   /*.folder:not(.closed) {
@@ -416,6 +416,9 @@
     margin: 1em;
     box-sizing: border-box;
   }
+  .folder.closed .paper-one{
+    padding:0px;
+  }
   .folder.closed .left {
     transform       : rotateY(180deg);
     /*transform-origin: center right;*/
@@ -437,7 +440,7 @@
     font-family: 'Parisienne', cursive;
     text-align : center;
     transition : transform ease-out 3s;
-    transform  : translate(-50.5%, 0);
+    transform  : translate(calc(-50% + 2px), 0)
   }
   .folder .guest.out {
     transform: translate(-200%, -220px);
