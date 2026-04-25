@@ -178,12 +178,16 @@ navRight.onclick = () => {
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   document.getElementById("openEnvelope").classList.add("opened");
-  setTimeout(function(){
+  document.querySelector(".folder").classList.remove("closed");
+  document.querySelector("footer").style.width = "300vw";
+  document.querySelector(".guest.out").style.display = "none";
+  updateView();
+  /*setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
     document.querySelector("footer").style.width = "300vw";
     document.querySelector(".guest.out").style.display = "none";
     updateView();
-  }, 2000);
+  }, 2000);*/
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
   }, 2800);
