@@ -372,21 +372,24 @@
   .folder .right{
     width: 100vw;
     flex-shrink: 0;
-    transition: all ease-out 2s;
+    transition: transform ease-out 2s, opacity ease-out 2s;
   }
   .folder .left.toLeft,
   .folder .center.toLeft{
+    width: 0vw;
     transform: translateX(-100vw);
     opacity: 0;
   }
   .folder .left.toCenter,
   .folder .center.toCenter,
   .folder .right.toCenter{
+    width: 100vw;
     transform: translateX(0);
     opacity: 1;
   }
   .folder .center.toRight,
   .folder .right.toRight{
+    width: 0vw;
     transform: translateX(100vw);
     opacity: 0;
   }
@@ -397,12 +400,10 @@
   .folder .left {
     z-index: 5;
     border-left: 1px solid rgba(0,0,0,0.4);
-    transition: all 2.5s ease;
   }
   .folder .right {
     z-index: 3;
     border-right: 1px solid rgba(0,0,0,0.4);
-    transition: all 2s ease;
   }
   .folder .center {
     /*position: relative;*/
