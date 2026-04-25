@@ -179,26 +179,26 @@ function updateView() {
 navLeft.onclick = () => {
   if (currentView === "center") {
     currentView = "left";
-    center.style.transform = "translateX(100vw)";
-    left.style.transform = "translateX(0)";
+    center.classList.add("toRight");
+    left.classList.add("toCenter");
   }
   else if (currentView === "right") {
     currentView = "center";
-    right.style.transform = "translateX(100vw)";
-    center.style.transform = "translateX(0)";
+    right.classList.add("toRight");
+    center.classList.add("toCenter");
   }
   updateView();
 };
 navRight.onclick = () => {
   if (currentView === "center") {
     currentView = "right";
-    right.style.transform = "translateX(0)";
-    center.style.transform = "translateX(-100vw)";
+    right.classList.add("toCenter");
+    center.classList.add("toLeft");
   }
   else if (currentView === "left") {
     currentView = "center";
-    center.style.transform = "translateX(0)";
-    left.style.transform = "translateX(-100vw)";
+    center.classList.add("toCenter");
+    left.classList.add("toLeft");
   }
   updateView();
 };
