@@ -207,7 +207,6 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   updateView();
   document.querySelector(".folder").classList.remove("closed");
   document.querySelector(".guest.out").style.display = "none";
-  center.style.transform = "translateX(0)";
   /*setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
     document.querySelector("footer").style.width = "300vw";
