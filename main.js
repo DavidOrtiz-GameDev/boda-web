@@ -216,12 +216,12 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   document.getElementById("openEnvelope").classList.add("opened");
   updateView();
   document.querySelector(".guest.out").style.display = "none";
+  document.querySelector(".folder").classList.remove("closed");
   /*document.querySelector(".folder").classList.remove("closed");
   left.style.transform = "translateX(-100vw)";
   center.style.transform = "translateX(-100vw)";
   right.style.transform = "translateX(-100vw)";*/
   setTimeout(function(){
-    document.querySelector(".folder").classList.remove("closed");
     left.style.transform = "translateX(-100vw)";
     center.style.transform = "translateX(-100vw)";
     right.style.transform = "translateX(-100vw)";
