@@ -215,17 +215,17 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   document.getElementById("openEnvelope").classList.add("opened");
   updateView();
-  document.querySelector(".folder").classList.remove("closed");
+  document.querySelector(".guest.out").style.display = "none";
+  /*document.querySelector(".folder").classList.remove("closed");
   left.style.transform = "translateX(-100vw)";
   center.style.transform = "translateX(-100vw)";
-  right.style.transform = "translateX(-100vw)";
-  document.querySelector(".guest.out").style.display = "none";
-  /*setTimeout(function(){
+  right.style.transform = "translateX(-100vw)";*/
+  setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
-    document.querySelector("footer").style.width = "300vw";
-    document.querySelector(".guest.out").style.display = "none";
-    updateView();
-  }, 2000);*/
+    left.style.transform = "translateX(-100vw)";
+    center.style.transform = "translateX(-100vw)";
+    right.style.transform = "translateX(-100vw)";
+  }, 2000);
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
   }, 2800);
