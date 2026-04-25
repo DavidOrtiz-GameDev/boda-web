@@ -190,7 +190,7 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
   setTimeout(() => {
-    content.style.transform = "translateX(0)";
+    content.style.transform = "translateX(-100vw)";
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }, 5200);
