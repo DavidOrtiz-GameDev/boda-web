@@ -392,12 +392,12 @@
   }
   .folder .left {
     z-index: 5;
-    border-left: 2px solid rgba(0,0,0,0.4);
+    border-left: 1px solid rgba(0,0,0,0.4);
     transition: all 2.5s ease;
   }
   .folder .right {
     z-index: 3;
-    border-right: 2px solid rgba(0,0,0,0.4);
+    border-right: 1px solid rgba(0,0,0,0.4);
     transition: all 2s ease;
   }
   .folder .center {
@@ -419,6 +419,7 @@
   }
   .folder.closed .paper-one{
     padding: 0px;
+    height: 0%;
   }
   .folder.closed .left {
     transform       : rotateY(180deg);
@@ -449,7 +450,7 @@
   #openEnvelope {
     position     : absolute;
     top          : 45%;
-    left         : calc(50vw - 50px)
+    left         : calc(50vw - 50px);
     width        : 100px;
     height       : 100px;
     z-index      : 6;
