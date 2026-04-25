@@ -467,14 +467,13 @@
     100% {left:-50px; transform: rotateY(180deg);}
   }
   #openEnvelope.opened {
-    left                      : -50px;
     z-index                   : 4;
-    transform                 : rotateY(180deg);
+    transform                 : rotateY(180deg) translateX(-200%);
     color                     : #c62828;
-    -webkit-animation-name    : anima;
+    /*-webkit-animation-name    : anima;
             animation-name    : anima;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+            animation-duration: 2s;*/
   }
   .folder .right-front {
     position  : absolute;
