@@ -145,20 +145,29 @@ let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
 const navRight = document.getElementById("nav-right");
 const content = document.querySelector(".content");
+const left = document.querySelector(".left");
+const center = document.querySelector(".center");
+const right = document.querySelector(".right");
 
 function updateView() {
   if (currentView === "center") {
-    content.style.transform = "translateX(-100vw)";
+    /*content.style.transform = "translateX(-100vw)";*/
+    left.style.display = "none";
+    right.style.display = "none";
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }
   if (currentView === "left") {
-    content.style.transform = "translateX(0)";
+    /*content.style.transform = "translateX(0)";*/
+    center.style.display = "none";
+    right.style.display = "none";
     navLeft.classList.add("hidden");
     navRight.classList.remove("hidden");
   }
   if (currentView === "right") {
-    content.style.transform = "translateX(-200vw)";
+    /*content.style.transform = "translateX(-200vw)";*/
+    left.style.display = "none";
+    center.style.display = "none";
     navRight.classList.add("hidden");
     navLeft.classList.remove("hidden");
   }
@@ -178,12 +187,8 @@ navRight.onclick = () => {
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   document.getElementById("openEnvelope").classList.add("opened");
-  /*document.querySelector(".left").style.width = "100vw";
-  document.querySelector(".center").style.width = "100vw";
-  document.querySelector(".right").style.width = "100vw";*/
   updateView();
   document.querySelector(".folder").classList.remove("closed");
-  document.querySelector("footer").style.width = "300vw";
   document.querySelector(".guest.out").style.display = "none";
   /*setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
