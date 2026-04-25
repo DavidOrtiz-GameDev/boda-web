@@ -167,12 +167,16 @@ function updateView() {
 navLeft.onclick = () => {
   if (currentView === "center") {
     currentView = "left";
+    center.classList.remove("toCenter");
     center.classList.add("toRight");
+    left.classList.remove("toLeft");
     left.classList.add("toCenter");
   }
   else if (currentView === "right") {
     currentView = "center";
+    right.classList.remove("toCenter");
     right.classList.add("toRight");
+    center.classList.remove("toLeft");
     center.classList.add("toCenter");
   }
   updateView();
@@ -180,12 +184,16 @@ navLeft.onclick = () => {
 navRight.onclick = () => {
   if (currentView === "center") {
     currentView = "right";
+    right.classList.remove("toRight");
     right.classList.add("toCenter");
+    center.classList.remove("toCenter");
     center.classList.add("toLeft");
   }
   else if (currentView === "left") {
     currentView = "center";
+    center.classList.remove("toRight");
     center.classList.add("toCenter");
+    left.classList.remove("toCenter");
     left.classList.add("toLeft");
   }
   updateView();
@@ -195,8 +203,9 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   document.getElementById("openEnvelope").classList.add("opened");
   left.classList.add("toLeft");
-  center.classList.add("toCenter");
   right.classList.add("toRight");
+  center.style.transform = "translateX(0)";
+  center.classList.add("toCenter");
   updateView();
   document.querySelector(".folder").classList.remove("closed");
   document.querySelector(".guest.out").style.display = "none";
