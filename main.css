@@ -374,25 +374,22 @@
     flex-shrink: 0;
     transition: width linear 0.01s, transform ease-out 0.5s, opacity ease 0.1s;
   }
-  .folder .left.toLeft,
+  /*.folder .left.toLeft,
   .folder .center.toLeft{
-    width: 0vw;
     transform: translateX(-100vw);
     opacity: 0;
   }
   .folder .left.toCenter,
   .folder .center.toCenter,
   .folder .right.toCenter{
-    width: 100vw;
     transform: translateX(0);
     opacity: 1;
   }
   .folder .center.toRight,
   .folder .right.toRight{
-    width: 0vw;
     transform: translateX(100vw);
     opacity: 0;
-  }
+  }*/
   .folder .left,
   .folder .right {
     background: url("images/blue-background.jpg") no-repeat center;
