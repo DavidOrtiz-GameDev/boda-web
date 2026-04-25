@@ -151,26 +151,14 @@ const right = document.querySelector(".right");
 
 function updateView() {
   if (currentView === "center") {
-    /*content.style.transform = "translateX(-100vw)";*/
-    left.style.display = "none";
-    center.style.display = "block";
-    right.style.display = "none";
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }
   if (currentView === "left") {
-    /*content.style.transform = "translateX(0)";*/
-    left.style.display = "block";
-    center.style.display = "none";
-    right.style.display = "none";
     navLeft.classList.add("hidden");
     navRight.classList.remove("hidden");
   }
   if (currentView === "right") {
-    /*content.style.transform = "translateX(-200vw)";*/
-    left.style.display = "none";
-    center.style.display = "none";
-    right.style.display = "block";
     navRight.classList.add("hidden");
     navLeft.classList.remove("hidden");
   }
@@ -206,6 +194,9 @@ navRight.onclick = () => {
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   document.getElementById("openEnvelope").classList.add("opened");
+  left.classList.add("toLeft");
+  center.classList.add("toCenter");
+  right.classList.add("toRight");
   updateView();
   document.querySelector(".folder").classList.remove("closed");
   document.querySelector(".guest.out").style.display = "none";
