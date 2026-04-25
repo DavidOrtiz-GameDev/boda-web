@@ -411,13 +411,14 @@
     background-position: center;
   }
   .folder .paper-one {
+    padding: 40px;
     width: calc(100% - 2em);
     height: calc(100% - 2em);
     margin: 1em;
     box-sizing: border-box;
   }
   .folder.closed .paper-one{
-    padding:0px;
+    padding: 0px;
   }
   .folder.closed .left {
     transform       : rotateY(180deg);
@@ -448,7 +449,7 @@
   #openEnvelope {
     position     : absolute;
     top          : 45%;
-    left         : calc(50vw - 43px);
+    left         : calc(50vw - 50px)
     width        : 100px;
     height       : 100px;
     z-index      : 6;
