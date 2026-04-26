@@ -213,23 +213,30 @@ navRight.onclick = () => {
 
 document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
-  document.getElementById("openEnvelope").classList.add("opened");
-  updateView();
-  document.querySelector(".guest.out").style.display = "none";
   setTimeout(function(){
+    document.getElementById("openEnvelope").classList.add("opened");
+    updateView();
+    document.querySelector(".guest.out").style.display = "none";
+    document.querySelector(".paper-one").style.padding = "40px";
+    document.querySelector(".paper-one").style.height = "calc(100% - 2em)";
     left.style.transform = "translateX(-100vw)";
     right.style.transform = "translateX(100vw)";
-  }, 1500);
+  }, 500);
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
+  }, 1000);
+  setTimeout(function(){
     center.classList.remove("outside");
+    center.style.transition = "none";
+    center.style.transform = "none";
     document.querySelector(".folder").insertBefore(center, right);
     center.style.transform = "translateX(-100vw)";
     right.style.transform = "translateX(-100vw)";
-  }, 2000);
+    document.querySelector(".folder .center").style.transition = "all 2.5s ease";
+  }, 3500);
   setTimeout(function(){
     document.querySelector(".right-front").style.display = "none";
-  }, 2800);
+  }, 4500);
   setTimeout(function(){
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
