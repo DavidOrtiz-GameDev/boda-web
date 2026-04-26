@@ -255,7 +255,6 @@ document.getElementById("sendSong").addEventListener("click", function () {
 
   fetch(SCRIPT_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       action: "addSong",
       nameGuest: nameGuest,
