@@ -412,6 +412,18 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  .center.outside {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 90vh;
+    background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.4), transparent 2%), 
+      linear-gradient(to left, rgba(0,0,0,0.4), transparent 2%), 
+      url("images/blue-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   .folder .paper-one {
     padding: 40px;
     width: calc(100% - 2em);
@@ -419,9 +431,12 @@
     margin: 1em;
     box-sizing: border-box;
   }
-  .folder.closed .paper-one{
+  .paper-one{
     padding: 0px;
+    width: calc(100% - 2em);
     height: 0%;
+    margin: 1em;
+    box-sizing: border-box;
   }
   .folder.closed .left {
     transform       : rotateY(180deg) translateX(50vw);
@@ -431,7 +446,7 @@
     transform       : rotateY(180deg) translateX(-50vw);
     transform-origin: center left;
   }
-  .folder .guest {
+  .guest {
     position   : relative;
     top        : 0.5em;
     width      : 90vw;
@@ -444,9 +459,9 @@
     font-family: 'Parisienne', cursive;
     text-align : center;
     transition : transform ease-out 3s;
-    transform  : translate(calc(-50% + 2px), 0)
+    transform  : translate(12.5px, 0);
   }
-  .folder .guest.out {
+  .guest.out {
     transform: translate(-200%, -220px);
   }
   #openEnvelope {
