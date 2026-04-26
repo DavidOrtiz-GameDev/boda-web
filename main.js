@@ -216,17 +216,14 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   document.getElementById("openEnvelope").classList.add("opened");
   updateView();
   document.querySelector(".guest.out").style.display = "none";
-  document.querySelector(".folder").classList.remove("closed");
-  center.style.transform = "translateX(-100vw)";
-  left.style.transform = "translateX(-100vw)";
-  center.style.width = "100vw";
-  right.style.transform = "translateX(100vw)";
-  /*document.querySelector(".folder").classList.remove("closed");
-  left.style.transform = "translateX(-100vw)";
-  center.style.transform = "translateX(-100vw)";
-  right.style.transform = "translateX(-100vw)";*/
   setTimeout(function(){
     left.style.transform = "translateX(-100vw)";
+    right.style.transform = "translateX(100vw)";
+  }, 1500);
+  setTimeout(function(){
+    document.querySelector(".folder").classList.remove("closed");
+    center.classList.remove("outside");
+    document.querySelector(".folder").insertBefore(center, right);
     center.style.transform = "translateX(-100vw)";
     right.style.transform = "translateX(-100vw)";
   }, 2000);
@@ -236,8 +233,4 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   setTimeout(function(){
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
-  /*setTimeout(() => {
-    navLeft.classList.remove("hidden");
-    navRight.classList.remove("hidden");
-  }, 5200);*/
 });
