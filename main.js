@@ -241,3 +241,36 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".right-back").classList.add("slided");
   }, 5000);
 });
+
+document.getElementById("sendSong").addEventListener("click", function () {
+  const song = document.getElementById("songName").value.trim();
+  const artist = document.getElementById("songArtist").value.trim();
+
+  if (!song || !artist) {
+    showPopup("<p>Por favor, escribe canción y artista.</p><button onclick='cancelar()'>Cerrar</button>");
+    return;
+  }
+
+  showPopup("<p>Añadiendo canción a la lista...</p>");
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      action: "addSong",
+      nameGuest: nameGuest,
+      guestCode: b64,
+      song: song,
+      artist: artist
+    })
+  })
+  .then(r => r.json())
+  .then(res => {
+    showPopup(`
+      <p>¡Temazo añadido a la lista!</p>
+      <button onclick="cancelar()">Aceptar</button>
+    `);
+
+    document.getElementById("songName").value = "";
+    document.getElementById("songArtist").value = "";
+  });
+});
