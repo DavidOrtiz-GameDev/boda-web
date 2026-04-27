@@ -122,6 +122,34 @@ function enviarAsistencia(asistencia, mensaje = "") {
   });
 }
 
+function startCountdown() {
+  // FECHA DE LA BODA
+  const targetDate = new Date("2026-10-10T19:00:00");
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+      return;
+    }
+
+    const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins  = Math.floor((diff / (1000 * 60)) % 60);
+    const secs  = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("cd-days").textContent = days.toString().padStart(2, "0");
+    document.getElementById("cd-hours").textContent = hours.toString().padStart(2, "0");
+    document.getElementById("cd-mins").textContent = mins.toString().padStart(2, "0");
+    document.getElementById("cd-secs").textContent = secs.toString().padStart(2, "0");
+  }
+
+  updateCountdown(); // primera actualización inmediata
+  setInterval(updateCountdown, 1000); // cada segundo
+}
+
 let file;
 switch (parseInt(total)) {
   case 2:
@@ -274,3 +302,5 @@ document.getElementById("sendSong").addEventListener("click", function () {
     document.getElementById("songArtist").value = "";
   });
 });
+
+startCountdown();
