@@ -359,7 +359,7 @@
   }
   .content {
     /*padding: 0 1.5em;*/
-    height: 80vh;
+    height: 90vh;
     box-sizing: border-box;
     transition: transform 0.5s ease;
   }
@@ -647,10 +647,11 @@
     pointer-events: none;
   }
   footer {
-    width         : 100vw;
+    width: 100vw;
+    height: 10vh;
     /*padding-bottom: 4em;*/
-    margin        : 0 auto;
-    text-align    : center;
+    margin: 0 auto;
+    text-align: center;
   }
   footer p {
     /*padding   : 0 45vw;*/
@@ -663,11 +664,15 @@
     text-decoration: none;
   }
   .countdown {
+    height: 15vh;
     font-size: 1.8em;
     font-weight: bold;
     color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 20px;
+    /*margin-top: 20px;*/
     letter-spacing: 2px;
   }
   .countdown span {
