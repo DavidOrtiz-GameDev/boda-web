@@ -662,7 +662,18 @@
     color          : #FFF;
     text-decoration: none;
   }
-  
+  .countdown {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+  }
+  .countdown span {
+    display: inline-block;
+    min-width: 40px;
+  }
   .preloader {
     position  : fixed;
     width     : 100%;
