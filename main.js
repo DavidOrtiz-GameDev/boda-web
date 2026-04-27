@@ -215,7 +215,6 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   document.querySelector(".guest").classList.add("out");
   setTimeout(function(){
     document.getElementById("openEnvelope").classList.add("opened");
-    updateView();
     document.querySelector(".guest.out").style.display = "none";
     document.querySelector(".paper-one").style.padding = "40px";
     document.querySelector(".paper-one").style.height = "calc(100% - 2em)";
@@ -239,6 +238,7 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   }, 4500);
   setTimeout(function(){
     document.querySelector(".right-back").classList.add("slided");
+    updateView();
   }, 5000);
 });
 
