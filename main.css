@@ -413,7 +413,8 @@
     z-index: 5;
     border-left: 1px solid rgba(0,0,0,0.4);
   }
-  .folder .song-form {
+  .folder .song-form,
+  .folder .imagePanel {
     opacity: 1;
     background-color: white;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
@@ -444,7 +445,9 @@
   .paper-one button:hover {
     background: #d9d9d9;
   }
-  .folder.closed .song-form {
+  .folder.closed .song-form,
+  .folder.closed .imagePanel,
+  .folder.closed .cover {
     opacity: 0;
     height: 70vh;
   }
@@ -480,15 +483,21 @@
     background-position: center;
   }
   .folder .paper-one,
-  .folder .song-form,
-  .folder .imagePanel{
+  .folder .song-form {
     padding: 40px;
     width: calc(100% - 2em);
     height: calc(100% - 2em);
     margin: 1em;
     box-sizing: border-box;
   }
-  .paper-one{
+  .folder .imagePanel {
+    padding: 40px;
+    width: calc(100% - 2em);
+    height: calc(77.5% - 2em);
+    margin: 1em;
+    box-sizing: border-box;
+  }
+  .paper-one {
     padding: 40px;
     border-radius: 12px;
     width: calc(100% - 2em);
@@ -564,6 +573,7 @@
     transition: transform ease-out 1s;
   }
   .folder .right-back {
+    height: 80vh;
     margin : 1em;
     z-index: 2;
   }
