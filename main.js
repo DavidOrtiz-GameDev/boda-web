@@ -244,7 +244,7 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   setTimeout(function(){
     document.getElementById("openEnvelope").classList.add("opened");
     document.querySelector(".guest.out").style.display = "none";
-    document.querySelector(".paper-one").style.padding = "40px";
+    document.querySelector(".paper-one").style.padding = "20px";
     document.querySelector(".paper-one").style.height = "calc(100% - 2em)";
     left.style.transform = "translateX(-100vw)";
     right.style.transform = "translateX(100vw)";
