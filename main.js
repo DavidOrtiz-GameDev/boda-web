@@ -167,7 +167,7 @@ switch (parseInt(total)) {
   default:
     file = '1';
 }
-document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");
+/*document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");*/
 
 let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
