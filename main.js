@@ -150,24 +150,38 @@ function startCountdown() {
   setInterval(updateCountdown, 1000); // cada segundo
 }
 
-let file;
+const secretImage = document.getElementById("secret-image");
+const imageClass = document.querySelector(".right-back img");
 switch (parseInt(total)) {
+  case 0:
+    secretImage.setAttribute("src", "images/StrangerThings.png");
+    imageClass.style.width = "125%";
+    break;
+  case 1:
+    secretImage.setAttribute("src", "images/OnePiece.png");
+    imageClass.style.width = "125%";
+    break;
   case 2:
-    file = '2';
+    secretImage.setAttribute("src", "images/From.png");
+    imageClass.style.width = "140%";
     break;
   case 3:
-    file = '3';
+    secretImage.setAttribute("src", "images/Fringe.jpg");
+    imageClass.style.width = "125%";
     break;
   case 4:
-    file = '4';
+    secretImage.setAttribute("src", "images/BigBang.png");
+    imageClass.style.width = "100%";
     break;
   case 5:
-    file = '5';
+    secretImage.setAttribute("src", "images/Friends.png");
+    imageClass.style.width = "125%";
     break;
-  default:
-    file = '1';
+  case 6:
+    secretImage.setAttribute("src", "images/Bridgerton.jpg");
+    imageClass.style.width = "125%";
+    break;
 }
-/*document.querySelector(".right-back img").setAttribute("src", "images/paper-two-" + file + ".jpg");*/
 
 let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
