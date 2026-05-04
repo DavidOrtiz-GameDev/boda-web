@@ -150,39 +150,6 @@ function startCountdown() {
   setInterval(updateCountdown, 1000); // cada segundo
 }
 
-const secretImage = document.getElementById("secret-image");
-const imageClass = document.querySelector(".right-back img");
-switch (parseInt(total)) {
-  case 0:
-    secretImage.setAttribute("src", "images/StrangerThings.png");
-    imageClass.style.width = "125%";
-    break;
-  case 1:
-    secretImage.setAttribute("src", "images/OnePiece.png");
-    imageClass.style.width = "125%";
-    break;
-  case 2:
-    secretImage.setAttribute("src", "images/From.png");
-    imageClass.style.width = "140%";
-    break;
-  case 3:
-    secretImage.setAttribute("src", "images/Fringe.jpg");
-    imageClass.style.width = "125%";
-    break;
-  case 4:
-    secretImage.setAttribute("src", "images/BigBang.png");
-    imageClass.style.width = "100%";
-    break;
-  case 5:
-    secretImage.setAttribute("src", "images/Friends.png");
-    imageClass.style.width = "125%";
-    break;
-  case 6:
-    secretImage.setAttribute("src", "images/Bridgerton.jpg");
-    imageClass.style.width = "125%";
-    break;
-}
-
 let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
 const navRight = document.getElementById("nav-right");
@@ -280,6 +247,38 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
   }, 4500);
   setTimeout(function(){
     document.querySelector(".right-back").classList.add("slided");
+    const secretImage = document.getElementById("secret-image");
+    const imageClass = document.querySelector(".right-back img");
+    switch (parseInt(total)) {
+      case 0:
+        secretImage.setAttribute("src", "images/StrangerThings.png");
+        imageClass.style.width = "125%";
+        break;
+      case 1:
+        secretImage.setAttribute("src", "images/OnePiece.png");
+        imageClass.style.width = "125%";
+        break;
+      case 2:
+        secretImage.setAttribute("src", "images/From.png");
+        imageClass.style.width = "140%";
+        break;
+      case 3:
+        secretImage.setAttribute("src", "images/Fringe.jpg");
+        imageClass.style.width = "125%";
+        break;
+      case 4:
+        secretImage.setAttribute("src", "images/BigBang.png");
+        imageClass.style.width = "100%";
+        break;
+      case 5:
+        secretImage.setAttribute("src", "images/Friends.png");
+        imageClass.style.width = "125%";
+        break;
+      case 6:
+        secretImage.setAttribute("src", "images/Bridgerton.jpg");
+        imageClass.style.width = "125%";
+        break;
+    }
     updateView();
   }, 5000);
 });
