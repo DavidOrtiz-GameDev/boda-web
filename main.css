@@ -382,14 +382,14 @@
   .folder.closed .center{
     width: 0vw;
   }
-  .folder.closed .leftLeft,
-  .folder.closed .rightRight {
+  .folder.closed .left-left,
+  .folder.closed .right-right {
     display: none;
   }
   .folder .left,
   .folder .right,
-  .folder .leftLeft,
-  .folder .rightRight {
+  .folder .left-left,
+  .folder .right-right {
     width: 100vw;
     flex-shrink: 0;
     transition: all 2.5s ease;
