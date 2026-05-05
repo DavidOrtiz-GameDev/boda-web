@@ -602,7 +602,7 @@
   }
   #secret-image {
     position: relative;
-    top: -220px;
+    top: -225px;
     z-index: 5;
     border: 5px solid black;
     transition: transform 2s;
