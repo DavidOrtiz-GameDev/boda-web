@@ -382,8 +382,8 @@
   .folder.closed .center{
     width: 0vw;
   }
-  .folder.closed .left-left,
-  .folder.closed .right-right {
+  .folder .left-left,
+  .folder .right-right {
     display: none;
   }
   .folder .left,
@@ -398,7 +398,7 @@
   }
   .folder .left {
     z-index: 5;
-    /*border-left: 1px solid rgba(0,0,0,0.4);*/
+    border-left: 1px solid rgba(0,0,0,0.4);
   }
   .folder .song-form,
   .folder .imagePanel {
@@ -440,7 +440,7 @@
   }
   .folder .right {
     z-index: 3;
-    /*border-right: 1px solid rgba(0,0,0,0.4);*/
+    border-right: 1px solid rgba(0,0,0,0.4);
   }
   .folder .center {
     /*position: relative;*/
