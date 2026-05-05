@@ -307,10 +307,6 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     right.style.transform = "translateX(100vw)";
   }, 500);
   setTimeout(function(){
-    leftLeft.style.display = "block";
-    leftLeft.style.transform = "translateX(-200vw)";
-    rightRight.style.display = "block";
-    rightRight.style.transform = "translateX(100vw)";
     document.querySelector(".folder").classList.remove("closed");
   }, 1000);
   setTimeout(function(){
@@ -318,8 +314,11 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     center.style.transition = "none";
     center.style.transform = "none";
     document.querySelector(".folder").insertBefore(center, right);
+    leftLeft.style.display = "block";
+    leftLeft.style.transform = "translateX(-200vw)";
     center.style.transform = "translateX(-200vw)";
     right.style.transform = "translateX(-200vw)";
+    rightRight.style.display = "block";
     rightRight.style.transform = "translateX(-200vw)";
     document.querySelector(".folder .center").style.transition = "all 2.5s ease";
   }, 3500);
