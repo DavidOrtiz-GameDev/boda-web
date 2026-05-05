@@ -196,68 +196,102 @@ let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
 const navRight = document.getElementById("nav-right");
 const content = document.querySelector(".content");
+const leftLeft = document.querySelector(".left-left");
 const left = document.querySelector(".left");
 const center = document.querySelector(".center");
 const right = document.querySelector(".right");
+const rightRight = document.querySelector(".right-right");
 
 function updateView() {
   if (currentView === "center") {
     navLeft.classList.remove("hidden");
     navRight.classList.remove("hidden");
   }
-  if (currentView === "left") {
+  if (currentView === "leftLeft") {
     navLeft.classList.add("hidden");
     navRight.classList.remove("hidden");
   }
+  if (currentView === "left") {
+    navLeft.classList.remove("hidden");
+    navRight.classList.remove("hidden");
+  }
   if (currentView === "right") {
+    navRight.classList.remove("hidden");
+    navLeft.classList.remove("hidden");
+  }
+  if (currentView === "rightRight") {
     navRight.classList.add("hidden");
     navLeft.classList.remove("hidden");
   }
 }
 // Eventos de flechas
 navLeft.onclick = () => {
-  if (currentView === "center") {
-    currentView = "left";
+  if (currentView === "left") {
+    currentView = "leftLeft";
+    leftLeft.style.transform = "translateX(0vw)";
     left.style.transform = "translateX(0vw)";
     center.style.transform = "translateX(0vw)";
     right.style.transform = "translateX(0vw)";
-    /*center.classList.remove("toCenter");
-    center.classList.add("toRight");
-    left.classList.remove("toLeft");
-    left.classList.add("toCenter");*/
+    rightRight.style.transform = "translateX(0vw)";
   }
-  else if (currentView === "right") {
-    currentView = "center";
+  else if (currentView === "center") {
+    currentView = "left";
+    leftLeft.style.transform = "translateX(-100vw)";
     left.style.transform = "translateX(-100vw)";
     center.style.transform = "translateX(-100vw)";
     right.style.transform = "translateX(-100vw)";
-    /*right.classList.remove("toCenter");
-    right.classList.add("toRight");
-    center.classList.remove("toLeft");
-    center.classList.add("toCenter");*/
+    rightRight.style.transform = "translateX(-100vw)";
+  }
+  else if (currentView === "right") {
+    currentView = "center";
+    leftLeft.style.transform = "translateX(-200vw)";
+    left.style.transform = "translateX(-200vw)";
+    center.style.transform = "translateX(-200vw)";
+    right.style.transform = "translateX(-200vw)";
+    rightRight.style.transform = "translateX(-200vw)";
+  }
+  else if (currentView === "rightRight") {
+    currentView = "right";
+    leftLeft.style.transform = "translateX(-300vw)";
+    left.style.transform = "translateX(-300vw)";
+    center.style.transform = "translateX(-300vw)";
+    right.style.transform = "translateX(-300vw)";
+    rightRight.style.transform = "translateX(-300vw)";
   }
   updateView();
 };
 navRight.onclick = () => {
-  if (currentView === "center") {
+  if (currentView === "right") {
+    currentView = "rightRight";
+    leftLeft.style.transform = "translateX(-400vw)";
+    left.style.transform = "translateX(-400vw)";
+    center.style.transform = "translateX(-400vw)";
+    right.style.transform = "translateX(-400vw)";
+    rightRight.style.transform = "translateX(-400vw)";
+  }
+  else if (currentView === "center") {
     currentView = "right";
-    left.style.transform = "translateX(-200vw)";
-    center.style.transform = "translateX(-200vw)";
-    right.style.transform = "translateX(-200vw)";
-    /*right.classList.remove("toRight");
-    right.classList.add("toCenter");
-    center.classList.remove("toCenter");
-    center.classList.add("toLeft");*/
+    leftLeft.style.transform = "translateX(-300vw)";
+    left.style.transform = "translateX(-300vw)";
+    center.style.transform = "translateX(-300vw)";
+    right.style.transform = "translateX(-300vw)";
+    rightRight.style.transform = "translateX(-300vw)";
   }
   else if (currentView === "left") {
     currentView = "center";
+    leftLeft.style.transform = "translateX(-200vw)";
+    left.style.transform = "translateX(-200vw)";
+    center.style.transform = "translateX(-200vw)";
+    right.style.transform = "translateX(-200vw)";
+    rightRight.style.transform = "translateX(-200vw)";
+  }
+  else if (currentView === "leftLeft") {
+    currentView = "left";
+    leftLeft.style.transform = "translateX(-100vw)";
     left.style.transform = "translateX(-100vw)";
     center.style.transform = "translateX(-100vw)";
     right.style.transform = "translateX(-100vw)";
-    /*center.classList.remove("toRight");
-    center.classList.add("toCenter");
-    left.classList.remove("toCenter");
-    left.classList.add("toLeft");*/
+    rightRight.style.transform = "translateX(-100vw)";
   }
   updateView();
 };
@@ -269,8 +303,12 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".guest.out").style.display = "none";
     document.querySelector(".paper-one").style.padding = "20px";
     document.querySelector(".paper-one").style.height = "calc(100% - 2em)";
-    left.style.transform = "translateX(-100vw)";
+    leftLeft.style.display = "block";
+    leftLeft.style.transform = "translateX(-200vw)";
+    left.style.transform = "translateX(-200vw)";
     right.style.transform = "translateX(100vw)";
+    rightRight.style.display = "block";
+    rightRight.style.transform = "translateX(100vw)";
   }, 500);
   setTimeout(function(){
     document.querySelector(".folder").classList.remove("closed");
@@ -280,8 +318,9 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     center.style.transition = "none";
     center.style.transform = "none";
     document.querySelector(".folder").insertBefore(center, right);
-    center.style.transform = "translateX(-100vw)";
-    right.style.transform = "translateX(-100vw)";
+    center.style.transform = "translateX(-200vw)";
+    right.style.transform = "translateX(-200vw)";
+    rightRight.style.transform = "translateX(-200vw)";
     document.querySelector(".folder .center").style.transition = "all 2.5s ease";
   }, 3500);
   setTimeout(function(){
