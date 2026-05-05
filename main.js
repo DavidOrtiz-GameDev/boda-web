@@ -303,14 +303,14 @@ document.getElementById("openEnvelope").addEventListener("click", function () {
     document.querySelector(".guest.out").style.display = "none";
     document.querySelector(".paper-one").style.padding = "20px";
     document.querySelector(".paper-one").style.height = "calc(100% - 2em)";
-    leftLeft.style.display = "block";
-    leftLeft.style.transform = "translateX(-200vw)";
     left.style.transform = "translateX(-200vw)";
     right.style.transform = "translateX(100vw)";
-    rightRight.style.display = "block";
-    rightRight.style.transform = "translateX(100vw)";
   }, 500);
   setTimeout(function(){
+    leftLeft.style.display = "block";
+    leftLeft.style.transform = "translateX(-200vw)";
+    rightRight.style.display = "block";
+    rightRight.style.transform = "translateX(100vw)";
     document.querySelector(".folder").classList.remove("closed");
   }, 1000);
   setTimeout(function(){
