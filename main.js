@@ -180,12 +180,7 @@ switch (parseInt(total)) {
     imageClass.setAttribute("src", "images/Bridgerton.jpg");
     imageClass.style.width = "125%";
     break;
-  default:
-    imageClass.setAttribute("src", "images/StrangerThings.png");
-    imageClass.style.width = "125%";
 }
-
-imageClass.style.pointer-events = "none";
 
 let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
