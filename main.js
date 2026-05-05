@@ -182,6 +182,8 @@ switch (parseInt(total)) {
     break;
 }
 
+imageClass.style.pointer-events = "none";
+
 let currentView = "center"; // estado inicial
 const navLeft = document.getElementById("nav-left");
 const navRight = document.getElementById("nav-right");
