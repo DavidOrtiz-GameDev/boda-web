@@ -582,6 +582,7 @@
     box-sizing: border-box;
     transition: transform ease-out 1s;
     transform : translate(0, 200px);
+    pointer-events: none;
   }
   .folder .right-back.slided img {
     transform: translate(0, 10px);
