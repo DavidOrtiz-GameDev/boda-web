@@ -382,36 +382,23 @@
   .folder.closed .center{
     width: 0vw;
   }
+  .folder.closed .leftLeft,
+  .folder.closed .rightRight {
+    display: none;
+  }
   .folder .left,
-  .folder .right{
+  .folder .right,
+  .folder .leftLeft,
+  .folder .rightRight {
     width: 100vw;
     flex-shrink: 0;
     transition: all 2.5s ease;
-  }
-  /*.folder .left.toLeft,
-  .folder .center.toLeft{
-    transform: translateX(-100vw);
-    opacity: 0;
-  }
-  .folder .left.toCenter,
-  .folder .center.toCenter,
-  .folder .right.toCenter{
-    transform: translateX(0);
-    opacity: 1;
-  }
-  .folder .center.toRight,
-  .folder .right.toRight{
-    transform: translateX(100vw);
-    opacity: 0;
-  }*/
-  .folder .left,
-  .folder .right {
     border-radius: 12px;
     background: url("images/orange-background.jpg") no-repeat center;
   }
   .folder .left {
     z-index: 5;
-    border-left: 1px solid rgba(0,0,0,0.4);
+    /*border-left: 1px solid rgba(0,0,0,0.4);*/
   }
   .folder .song-form,
   .folder .imagePanel {
@@ -453,7 +440,7 @@
   }
   .folder .right {
     z-index: 3;
-    border-right: 1px solid rgba(0,0,0,0.4);
+    /*border-right: 1px solid rgba(0,0,0,0.4);*/
   }
   .folder .center {
     /*position: relative;*/
