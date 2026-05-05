@@ -24,11 +24,15 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwbBywUnSyjB9r2ujHkQ
 function desactivarBotones() {
   document.getElementById("btnSi").disabled = true;
   document.getElementById("btnNo").disabled = true;
+  document.getElementById("nav-left").classList.add("hidden");
+  document.getElementById("nav-right").classList.add("hidden");
 }
 
 function activarBotones() {
   document.getElementById("btnSi").disabled = false;
   document.getElementById("btnNo").disabled = false;
+  document.getElementById("nav-left").classList.remove("hidden");
+  document.getElementById("nav-right").classList.remove("hidden");
 }
 
 function showPopup(html) {
@@ -71,8 +75,14 @@ function intentarAsistencia(asistenciaElegida) {
     // Caso 1: primera vez
     if (!info.respondio) {
       showPopup(`
-        <p>¿Seguro que quieres confirmar que ${asistenciaElegida === "SI" ? "asistirás" : "no asistirás"}?</p>
-        <p>Si quieres, ¡puedes enviarnos un mensaje! ❤️</p>
+        if (asistenciaElegida === "SI") {
+          <p>¡Nos alegra que puedas asistir!</p>
+          <p>Si quieres compartir con nosotros cualquier cosa, como intolerancias (o tu amor hacia nosotros), ¡no dudes en hacérnoslo saber! ❤️</p>
+        }
+        else {
+          <p>¿Seguro que quieres confirmar que no asistirás?</p>
+          <p>Si quieres, ¡puedes enviarnos un mensaje! ❤️</p>
+        }
         <textarea id="msg"></textarea>
         <button onclick="confirmar('${asistenciaElegida}')">Confirmar</button>
         <button onclick="cancelar()">Cancelar</button>
