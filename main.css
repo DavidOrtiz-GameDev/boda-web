@@ -414,7 +414,8 @@
     justify-content: center;
     text-align: center;
   }
-  .folder .song-form input {
+  .folder .song-form input,
+  .folder .menuPanel input {
     width: 90%;
     padding: 10px;
     margin: 8px 0 16px;
@@ -423,6 +424,7 @@
     font-size: 16px;
   }
   .folder .song-form button,
+  .folder .menuPanel button,
   .paper-one button {
     margin: 5px;
     padding: 10px 20px;
