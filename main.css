@@ -649,6 +649,11 @@
     cursor: pointer;
     user-select: none;
     transition: opacity 0.3s;
+    animation: arrowAnim 3s ease infinite;
+  }
+  @keyframes arrowAnim {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(0.85); }
   }
   #nav-left {
     left: 10px;
