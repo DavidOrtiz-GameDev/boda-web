@@ -358,4 +358,44 @@ document.getElementById("sendSong").addEventListener("click", function () {
   });
 });
 
+document.getElementById("sendMessage").addEventListener("click", function () {
+  const message = document.getElementById("message").value.trim();
+
+  if (!message) {
+    showPopup("<p>Por favor, escribe algún mensaje antes.</p><button onclick='cancelar()'>Cerrar</button>");
+    return;
+  }
+
+  showPopup("<p>Guardando mensaje...</p>");
+
+  fetch(SCRIPT_URL, {
+    method: "POST",
+    body: JSON.stringify({
+      action: "addMessage",
+      nameGuest: nameGuest,
+      guestCode: b64,
+      mensaje: mensaje
+    })
+  })
+  .then(r => r.json())
+  .then(res => {
+    showPopup(`
+      <p>¡Gracias por tu mensaje!</p>
+      <button onclick="cancelar()">Aceptar</button>
+    `);
+
+    document.getElementById("message").value = "";
+  });
+});
+
+document.getElementById("menuZoom").addEventListener("click", () => {
+  document.getElementById("menuZoom").classList.toggle("zoomed");
+});
+
+document.getElementById("gMap").addEventListener("click", () => {
+  const direccion = "Pg. de Colom, 9, Barcelona";
+  const url = "https://maps.app.goo.gl/G6NGMA3pEghaiPfD8";
+  window.open(url, "_blank");
+});
+
 startCountdown();
