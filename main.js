@@ -374,7 +374,7 @@ document.getElementById("sendMessage").addEventListener("click", function () {
       action: "addMessage",
       nameGuest: nameGuest,
       guestCode: b64,
-      mensaje: mensaje
+      mensaje: message
     })
   })
   .then(r => r.json())
