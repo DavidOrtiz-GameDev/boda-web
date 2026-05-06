@@ -357,6 +357,9 @@
     background-size: 100% 100%;
     font-family: Helvetica, sans-serif;
   }
+  p, h2, hr, h1, h4, input, button {
+    margin: 0;
+  }
   .content {
     /*padding: 0 1.5em;*/
     height: 90vh;
@@ -403,13 +406,15 @@
   .folder .song-form,
   .folder .imagePanel,
   .folder .menuPanel,
-  .folder .mapPanel{
+  .folder .mapPanel, 
+  .folder .paper-one {
     opacity: 1;
     background-color: white;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -418,7 +423,7 @@
   .folder .menuPanel input {
     width: 90%;
     padding: 10px;
-    margin: 8px 0 16px;
+    /*margin: 8px 0 16px;*/
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 16px;
@@ -426,7 +431,7 @@
   .folder .song-form button,
   .folder .menuPanel button,
   .paper-one button {
-    margin: 5px;
+    /*margin: 5px;*/
     padding: 10px 20px;
     border-radius: 8px;
     font-size: 16px;
