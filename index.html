@@ -21,10 +21,6 @@
   <div class="content">
     <div class="folder closed">
       <div class="left-left">
-        <h4 style="color: #888;">Esto es una prueba para ver cómo queda.</h4>
-        <h4 style="color: #888;">Posiblemente haya que crear la clase menuPanel o similar.</h4>
-      </div>
-      <div class="left">
         <div class="song-form">
           <h4 style="color: #888;">¿Quieres que suene alguna canción especial el día de la celebración?</h4>
           <h4 style="color: #888;">¡Mándanos las canciones que quieras y se las pasaremos a la DJ!</h4>
@@ -33,6 +29,14 @@
           <label style="color: #888; font-weight: bold;">Artista</label>
           <input type="text" id="songArtist" placeholder="Artista o grupo">
           <button id="sendSong">Enviar canción</button>
+        </div>
+      </div>
+      <div class="left">
+        <div class="menuPanel">
+          <h4 style="color: #888;">Esperamos que te guste el menú que hemos seleccionado, pero no dudes en hacernos saber cualquier intolerancia o alergia.</h4>
+          <img src="images/MenuBoda.PNG" style="width: 50%;" class="zoomable" id="menuZoom">
+          <input type="text" id="message" placeholder="Intolerancias o alergias">
+          <button id="sendMessage">Enviar mensaje</button>
         </div>
       </div>
       <div class="right">
@@ -50,16 +54,19 @@
         </div>
       </div>
       <div class="right-right">
-        <h4 style="color: #888;">Esto es otra prueba</h4>
+        <div class="mapPanel">
+          <h4 style="color: #888;">No queremos que te pierdas de camino al hotel, así que pincha en el icono de Google Maps para ver su ubicación.</h4>
+          <img src="images/logo-gmaps.png" class="open-maps" id="gMap">
+        </div>
       </div>
       <button id="openEnvelope">Abrir</button>
     </div>
     <div class="center outside">
         <p class="guest"></p>
         <div class="paper-one" style="background-color: white; box-shadow: 0px 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-          <p style="color: #888;">Aunque intuimos que os habéis enterado...</p>
+          <p style="color: #888;">Aunque intuimos que ya te has enterado...</p>
           <h2 style="color: #555; font-family: 'Georgia', serif;">¡Nos hemos casado!</h2>
-          <p style="color: #888;">Por ello, no queremos dejar pasar la ocasión de celebrar tan maravilloso e imprevisible evento con vosotros, así que...<br>¡tomad nota!</p>
+          <p style="color: #888;">Por ello, no queremos dejar pasar la ocasión de celebrar tan maravilloso e imprevisible evento contigo, así que...<br>¡toma nota!</p>
           <hr style="width: 50%; border: 0; border-top: 1px solid #eee;">
           <h1 style="color: #777; font-size: 1.5em;">Iván & David</h1>
           <p style="font-weight: bold; color: #444;">10 de Octubre de 2026<br>Hotel Serras - 19h</p>
