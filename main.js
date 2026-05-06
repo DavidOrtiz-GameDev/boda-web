@@ -75,14 +75,8 @@ function intentarAsistencia(asistenciaElegida) {
     // Caso 1: primera vez
     if (!info.respondio) {
       showPopup(`
-        if (asistenciaElegida === "SI") {
-          <p>¡Nos alegra que puedas asistir!</p>
-          <p>Si quieres compartir con nosotros cualquier cosa, como intolerancias (o tu amor hacia nosotros), ¡no dudes en hacérnoslo saber! ❤️</p>
-        }
-        else {
-          <p>¿Seguro que quieres confirmar que no asistirás?</p>
-          <p>Si quieres, ¡puedes enviarnos un mensaje! ❤️</p>
-        }
+        <p>${asistenciaElegida === "SI" ? "¡Nos alegra que puedas asistir!" : "¿Seguro que quieres confirmar que no asistirás?"},</p>
+        <p>${asistenciaElegida === "SI" ? "Si quieres compartir con nosotros cualquier cosa, como intolerancias (o tu amor hacia nosotros), ¡no dudes en hacérnoslo saber! ❤️" : "Si quieres, ¡puedes enviarnos un mensaje! ❤️"},</p>
         <textarea id="msg"></textarea>
         <button onclick="confirmar('${asistenciaElegida}')">Confirmar</button>
         <button onclick="cancelar()">Cancelar</button>
