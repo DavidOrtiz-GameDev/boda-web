@@ -490,6 +490,15 @@
     margin: 1em;
     box-sizing: border-box;
   }
+  .zoomable {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .zoomable.zoomed {
+    transform: scale(2.5);
+    z-index: 9999;
+    position: relative;
+  }
   .paper-one {
     padding: 40px;
     border-radius: 12px;
