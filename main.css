@@ -419,6 +419,9 @@
     justify-content: center;
     text-align: center;
   }
+  .folder .menuPanel {
+    gap: 15px;
+  }
   .folder .song-form input,
   .folder .menuPanel input {
     width: 90%;
@@ -484,25 +487,26 @@
   .folder .song-form,
   .folder .menuPanel,
   .folder .mapPanel {
-    padding: 40px;
+    padding: 30px;
     width: calc(100% - 2em);
     height: calc(100% - 2em);
     margin: 1em;
     box-sizing: border-box;
   }
   .folder .imagePanel {
-    padding: 40px;
+    padding: 30px;
     width: calc(100% - 2em);
     height: calc(77.5% - 2em);
     margin: 1em;
     box-sizing: border-box;
   }
   .zoomable {
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
   }
   .zoomable.zoomed {
-    transform: scale(2.5);
+    transform: scaleX(2.3) scaleY(2.5);
+    top: -20px;
     z-index: 9999;
     position: relative;
   }
@@ -613,6 +617,7 @@
     pointer-events: none;
   }
   #secret-image {
+    padding: 40px;
     position: relative;
     top: -225px;
     z-index: 5;
