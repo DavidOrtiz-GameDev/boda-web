@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 2000px) {
   body {
     /*min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
@@ -342,7 +342,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1999px) {
   body {
     /*min-width: -webkit-fit-content;
     min-width: -moz-fit-content;
@@ -563,7 +563,7 @@
     font-weight  : bold;
     outline      : none;
     cursor       : pointer;
-    transition   : all 0.5s ease;
+    transition   : transform 1s ease, opacity 3s ease;
   }
   #openEnvelope:focus,
   #openEnvelope:hover {
@@ -578,7 +578,8 @@
     100% {left:-50px; transform: rotateY(180deg);}
   }
   #openEnvelope.opened {
-    transform                 : translateX(-300%);
+    transform: translateX(-1000%);
+    opacity: 0;
   }
   .folder .right-front {
     position  : absolute;
@@ -625,7 +626,7 @@
     transition: transform 2s;
   }
   #secret-image:active {
-    transform: translateY(-370px);
+    transform: translateY(-96%);
   }
   .popup {
     position: fixed;
